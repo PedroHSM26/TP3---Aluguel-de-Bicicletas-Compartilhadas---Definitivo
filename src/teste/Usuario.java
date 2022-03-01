@@ -12,12 +12,8 @@ public class Usuario {
 	private Long idUsuario ;
 	private int cpf;
 	private PlanoAssinatura tipoDePlano;
-	private Bicicleta bicicleta;
 	
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public Usuario() {
+		
 	}
-
 }
