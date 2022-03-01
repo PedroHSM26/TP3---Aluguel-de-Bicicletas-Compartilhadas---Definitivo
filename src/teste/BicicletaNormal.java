@@ -7,7 +7,7 @@ public class BicicletaNormal {
 		super();
 	}
 	
-	//Sobrecarga
+	
 	public BicicletaNormal(Long m) {
 		marcha = m;
 	}

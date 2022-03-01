@@ -1,15 +1,16 @@
 package teste;
 
 public abstract class Bicicleta {
-	private Long idBicicleta;
-	private Boolean estadoUso;
-	private Double tempoUso;
-	private Long idadeBicicleta;
-	private String qrCode;
+	protected Long idBicicleta;
+	protected Boolean estadoUso;
+	protected Double tempoUso;
+	protected Long idadeBicicleta;
+	protected String qrCode;
 	
 	public Bicicleta() {
 		super();
 	}
+	
 	
 	public Long getIdBicicleta() {
 		return idBicicleta;
