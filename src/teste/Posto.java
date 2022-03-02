@@ -14,12 +14,15 @@ public class Posto {
 	}
 
 	//Sobrecarga
-	public Posto(BicicletaEletrica bikeElec, BicicletaNormal bikeNor, int eo, Usuario u) {
-		
+	public Posto(BicicletaEletrica[] bikeElec, BicicletaNormal[] bikeNor, int eo, Usuario u) {
+		usuario = u;
+		espacosOcupados = eo;
+		bicicletas_eletricas = bikeElec;
+		bicicletas_normais = bikeNor;
 	}
-
-	public void retirarBicicleta() {
-		
+	// Analisar método getAluno e setAluno no objeto Curso do exemplo da prof
+	public BicicletaEletrica getBicicletaEletrica(int i) {
+		return bicicletas_eletricas[i].getBicicletaEletrica();
 	}
 	
 	public BicicletaEletrica[] getBicicletas_eletricas() {

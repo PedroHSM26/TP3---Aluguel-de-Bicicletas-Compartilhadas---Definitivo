@@ -6,4 +6,13 @@ public class Mapa {
 	public Mapa() {
 		
 	}
+
+	//Get e Set da Localização
+	public String getLocalizacao() {
+		return localizacao;
+	}
+
+	public void setLocalizacao(String localizacao) {
+		this.localizacao = localizacao;
+	}
 }

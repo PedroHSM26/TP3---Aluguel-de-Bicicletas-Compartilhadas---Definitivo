@@ -7,7 +7,7 @@ public class BicicletaEletrica extends Bicicleta {
 		super();
 	}
 	
-// Também Colocar aqui os atributos e métodos da classe abstrata Bicicleta
+// Também Colocar aqui os atributos e métodos da classe abstrata Bicicleta usando this
 	public BicicletaEletrica(Long e) {
 		energia = e;
 	}

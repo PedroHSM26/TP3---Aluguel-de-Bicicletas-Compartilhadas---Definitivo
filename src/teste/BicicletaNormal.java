@@ -7,7 +7,7 @@ public class BicicletaNormal {
 		super();
 	}
 	
-	
+	// Também Colocar aqui os atributos e métodos da classe abstrata Bicicleta usando this
 	public BicicletaNormal(Long m) {
 		marcha = m;
 	}

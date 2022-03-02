@@ -13,9 +13,10 @@ public class Usuario {
 	private int cpf;
 	private PlanoAssinatura planoAssinado;
 	private Telefone numTel;
+	private Posto posto;
 	
 	public Usuario(String mail, String password, String name, String nac, Date nasc, Long id, 
-			int cPF, Telefone num, PlanoAssinatura plano) {
+			int cPF, Telefone num, PlanoAssinatura plano, Posto p) {
 											
 		email = mail;
 		senha = password;
@@ -25,9 +26,64 @@ public class Usuario {
 		cpf = cPF;
 		this.numTel = num; 
 		this.planoAssinado = plano;
+		this.posto = p;
 		
 	}
-
+	// Métodos para assinar um plano
+	public void assinarPlanoBicEletric() {
+		 PlanoAssinatura plano = this.getPlanoAssinado();
+		 plano.setTipoDePlano("Plano de Bicicleta Elétrica");
+		 plano.setMetodoPagamento("Cartão ou PIX");
+	 }
+	
+	public void assinarPlanoBicNor() {
+		 PlanoAssinatura plano = this.getPlanoAssinado();
+		 plano.setTipoDePlano("Plano de Bicicleta Normal");
+		 plano.setMetodoPagamento("Cartão ou PIX");
+	 }
+	
+	
+	// Método para retirar uma bicicleta e poder usá-la
+	public void retirarBicicleta() {
+		int qtd;
+		Posto p = this.getPosto();
+		PlanoAssinatura plano = this.getPlanoAssinado(); // !!!! Buscar arrumar este método para ele conseguir influenciar no array de bicicletas.
+		if (plano.getTipoDePlano() == "Plano de Bicicleta Elétrica") {
+			qtd = p.getEspacosOcupados();
+			p.setBicicletas_eletricas(qtd);
+			p.setEspacosOcupados(qtd-1);
+		}
+		else {
+			qtd = p.getEspacosOcupados();
+			p.setBicicletas_normais(null);
+			p.setEspacosOcupados(qtd-1);
+		}
+	}
+	
+	// Método para devolver uma bicicleta ao Posto.
+	public void devolverBicicleta() {
+		int qtd;
+		int qtdBikeE;
+		int qtdBikeN;
+		PlanoAssinatura plano = this.getPlanoAssinado();
+		Posto p = this.getPosto();
+		if (p.getEspacosOcupados() < 10) {
+			qtd = p.getEspacosOcupados();
+			p.setEspacosOcupados(qtd+1);
+			if (plano.getTipoDePlano() == "Plano de Bicicleta Elétrica") {
+				qtdBikeE = p.getBicicletas_eletricas();
+				p.setBicicletas_eletricas(qtdBikeE+1);
+			}
+			else {
+				qtdBikeN = p.getBicicletas_normais();
+				p.setBicicletas_normais(qtdBikeN+1);
+			}
+			
+		}
+	}
+	
+	
+	// Gets e Sets do Objeto Usuário
 	public String getEmail() {
 		return email;
 	}
@@ -98,5 +154,18 @@ public class Usuario {
 
 	public void setTel(Telefone tel) {
 		this.numTel = tel;
+	}
+	
+	public Telefone getNumTel() {
+		return numTel;
+	}
+	public void setNumTel(Telefone numTel) {
+		this.numTel = numTel;
+	}
+	public Posto getPosto() {
+		return posto;
+	}
+	public void setPosto(Posto posto) {
+		this.posto = posto;
 	}
 }

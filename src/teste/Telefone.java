@@ -10,7 +10,7 @@ public class Telefone {
 		ddi = dDI;
 		ddd = dDD;
 	}
-
+	// Gets e Sets
 	public int getNumero() {
 		return numero;
 	}
