@@ -15,6 +15,14 @@ public class Usuario {
 	private Telefone numTel;
 	private Posto posto;
 	
+	public Usuario(String mail, String password, String name, String nac) {
+		
+		email = mail;
+		senha = password;
+		nomeCompleto = name;
+		nacionalidade = nac;
+	}
+	
 	public Usuario(String mail, String password, String name, String nac, Date nasc, Long id, 
 			int cPF, Telefone num, PlanoAssinatura plano, Posto p) {
 											
@@ -34,7 +42,7 @@ public class Usuario {
 		 PlanoAssinatura plano = this.getPlanoAssinado();
 		 plano.setTipoDePlano("Plano de Bicicleta Elétrica");
 		 plano.setMetodoPagamento("Cartão ou PIX");
-	 }
+	 }	
 	
 	public void assinarPlanoBicNor() {
 		 PlanoAssinatura plano = this.getPlanoAssinado();
@@ -44,13 +52,16 @@ public class Usuario {
 	
 	
 	// Método para retirar uma bicicleta e poder usá-la
+	
 	public void retirarBicicleta() {
 		int qtd;
+		BicicletaEletrica[] arrayBikes;
 		Posto p = this.getPosto();
 		PlanoAssinatura plano = this.getPlanoAssinado(); // !!!! Buscar arrumar este método para ele conseguir influenciar no array de bicicletas.
 		if (plano.getTipoDePlano() == "Plano de Bicicleta Elétrica") {
 			qtd = p.getEspacosOcupados();
-			p.setBicicletas_eletricas(qtd);
+			arrayBikes = p.getBicicletas_eletricas();
+			p.setBicicletas_eletricas(Bicicletas_eletricas.pop());
 			p.setEspacosOcupados(qtd-1);
 		}
 		else {

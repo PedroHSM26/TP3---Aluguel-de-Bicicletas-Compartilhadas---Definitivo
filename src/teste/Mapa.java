@@ -3,9 +3,7 @@ package teste;
 public class Mapa {
 	private String localizacao;
 	
-	public Mapa() {
-		
-	}
+	
 
 	//Get e Set da Localização
 	public String getLocalizacao() {
