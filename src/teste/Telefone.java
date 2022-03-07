@@ -34,5 +34,9 @@ public class Telefone {
 	public void setDdd(int ddd) {
 		this.ddd = ddd;
 	}
+	@Override
+	public String toString() {
+		return ""+ ddi+ ddd+ numero +"";
+	}
 	
 }

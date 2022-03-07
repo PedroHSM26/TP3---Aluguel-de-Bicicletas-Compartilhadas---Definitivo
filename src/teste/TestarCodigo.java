@@ -2,7 +2,7 @@ package teste;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class TestarCódigo {
+public class TestarCodigo {
 	static Usuario u1;
 	static Posto p1;
 	static BicicletaEletrica be1;
@@ -20,8 +20,8 @@ public class TestarCódigo {
 		t.setDdd(661);
 		t.setNumero(333333);
 		
-		System.out.println(u1.toString()); // Está imprimindo o hashcode do objeto,assistir video da prof sobre conceitos estruturais
-		System.out.println(agora.toString()); //Vai ter q ir no objeto u1 e escrever o toString lá!
+		System.out.println(u1.toString()); // Estï¿½ imprimindo o hashcode do objeto,assistir video da prof sobre conceitos estruturais
+		System.out.println(agora.toString()); //Vai ter q ir no objeto u1 e escrever o toString lï¿½!
 		System.out.println(t.toString());
 	}
 
