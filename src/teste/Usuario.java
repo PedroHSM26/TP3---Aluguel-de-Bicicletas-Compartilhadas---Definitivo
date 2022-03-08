@@ -15,7 +15,7 @@ public class Usuario {
 	private Telefone numTel;
 	private Posto posto;
 	
-	public Usuario(String mail, String password, String name, String nac){ //Metodo para simplificar o teste do codigo
+	public Usuario(String mail, String password, String name, String nac) {
 		
 		email = mail;
 		senha = password;
@@ -32,36 +32,36 @@ public class Usuario {
 		nacionalidade = nac;
 		idUsuario = id;
 		cpf = cPF;
-		this.numTel = num;
+		this.numTel = num; 
 		this.planoAssinado = plano;
 		this.posto = p;
 		
 	}
-	// Mï¿½todos para assinar um plano
+	// Métodos para assinar um plano
 	public void assinarPlanoBicEletric() {
 		 PlanoAssinatura plano = this.getPlanoAssinado();
-		 plano.setTipoDePlano("Plano de Bicicleta Elï¿½trica");
-		 plano.setMetodoPagamento("Cartï¿½o ou PIX");
+		 plano.setTipoDePlano("Plano de Bicicleta Elétrica");
+		 plano.setMetodoPagamento("Cartão ou PIX");
 	 }	
 	
 	public void assinarPlanoBicNor() {
 		 PlanoAssinatura plano = this.getPlanoAssinado();
 		 plano.setTipoDePlano("Plano de Bicicleta Normal");
-		 plano.setMetodoPagamento("Cartï¿½o ou PIX");
+		 plano.setMetodoPagamento("Cartão ou PIX");
 	 }
 	
 	
-	// Mï¿½todo para retirar uma bicicleta e poder usï¿½-la
+	// Método para retirar uma bicicleta e poder usá-la
 	
 	public void retirarBicicleta() {
 		int qtd;
 		BicicletaEletrica[] arrayBikes;
 		Posto p = this.getPosto();
-		PlanoAssinatura plano = this.getPlanoAssinado(); // !!!! Buscar arrumar este mï¿½todo para ele conseguir influenciar no array de bicicletas.
-		if (plano.getTipoDePlano() == "Plano de Bicicleta Elï¿½trica") {
+		PlanoAssinatura plano = this.getPlanoAssinado(); // !!!! Buscar arrumar este método para ele conseguir influenciar no array de bicicletas.
+		if (plano.getTipoDePlano() == "Plano de Bicicleta Elétrica") {
 			qtd = p.getEspacosOcupados();
-			arrayBikes = p.getBicicletas_eletricas();
-			p.setBicicletas_eletricas(Bicicletas_eletricas.pop());
+			arrayBikes = p.getBicicletaEletrica();
+			
 			p.setEspacosOcupados(qtd-1);
 		}
 		else {
@@ -71,7 +71,7 @@ public class Usuario {
 		}
 	}
 	
-	// Mï¿½todo para devolver uma bicicleta ao Posto.
+	// Método para devolver uma bicicleta ao Posto.
 	public void devolverBicicleta() {
 		int qtd;
 		int qtdBikeE;
@@ -81,7 +81,7 @@ public class Usuario {
 		if (p.getEspacosOcupados() < 10) {
 			qtd = p.getEspacosOcupados();
 			p.setEspacosOcupados(qtd+1);
-			if (plano.getTipoDePlano() == "Plano de Bicicleta Elï¿½trica") {
+			if (plano.getTipoDePlano() == "Plano de Bicicleta Elétrica") {
 				qtdBikeE = p.getBicicletas_eletricas();
 				p.setBicicletas_eletricas(qtdBikeE+1);
 			}

@@ -1,10 +1,10 @@
 package teste;
 
 public abstract class Bicicleta {
-	protected Long idBicicleta;
+	protected int idBicicleta;
 	protected Boolean estadoUso;
 	protected Double tempoUso;
-	protected Long idadeBicicleta;
+	protected int idadeBicicleta;
 	protected String qrCode;
 	
 	public Bicicleta() {
@@ -12,10 +12,10 @@ public abstract class Bicicleta {
 	}
 	
 	
-	public Long getIdBicicleta() {
+	public int getIdBicicleta() {
 		return idBicicleta;
 	}
-	public void setIdBicicleta(Long idBicicleta) {
+	public void setIdBicicleta(int idBicicleta) {
 		this.idBicicleta = idBicicleta;
 	}
 	public Boolean getEstadoUso() {
@@ -30,10 +30,10 @@ public abstract class Bicicleta {
 	public void setTempoUso(Double tempoUso) {
 		this.tempoUso = tempoUso;
 	}
-	public Long getIdadeBicicleta() {
+	public int getIdadeBicicleta() {
 		return idadeBicicleta;
 	}
-	public void setIdadeBicicleta(Long idadeBicicleta) {
+	public void setIdadeBicicleta(int idadeBicicleta) {
 		this.idadeBicicleta = idadeBicicleta;
 	}
 	public String getQrCode() {

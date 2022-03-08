@@ -20,8 +20,8 @@ public class TestarCodigo {
 		t.setDdd(661);
 		t.setNumero(333333);
 		
-		System.out.println(u1.toString()); // Est� imprimindo o hashcode do objeto,assistir video da prof sobre conceitos estruturais
-		System.out.println(agora.toString()); //Vai ter q ir no objeto u1 e escrever o toString l�!
+		System.out.println(u1.toString()); // Est  imprimindo o hashcode do objeto,assistir video da prof sobre conceitos estruturais
+		System.out.println(agora.toString()); //Vai ter q ir no objeto u1 e escrever o toString l !
 		System.out.println(t.toString());
 	}
 

@@ -1,5 +1,7 @@
 package teste;
 
+import java.util.ArrayList;
+
 public class Posto {
 	private BicicletaEletrica[]  bicicletas_eletricas = new BicicletaEletrica[5]; //Colocar até 5 bicicletas nesse array
 	private BicicletaNormal[]  bicicletas_normais = new BicicletaNormal[5]; //Colocar até 5 bicicletas nesse array
@@ -27,15 +29,36 @@ public class Posto {
 	
 	
 	// Analisar método getAluno e setAluno no objeto Curso do exemplo da prof
-	public BicicletaEletrica [] getBicicletas_eletricas() {
-		for (int cont = 1; cont <6; cont++) {
-			bicicletas_eletricas [cont] = cont;
-		}
-		return bicicletas_eletricas;
-	}
 	
-
-	public void setBicicletas_eletricas(BicicletaEletrica[] bicicletas_eletricas) {
+	
+	
+		public BicicletaEletrica[] getBicicletaEletrica() {
+			
+			return bicicletas_eletricas;
+		}
+		
+//		public static int[] getBicicletaEletrica() {
+			
+			
+//			ArrayList<BicicletaEletrica> bicicletas_eletricas = new ArrayList<BicicletaEletrica>();
+//			
+//			bicicletas_eletricas.add();
+//			bicicletas_eletricas.add(2);
+//			bicicletas_eletricas.add(3);
+//			bicicletas_eletricas.add(4);
+//			bicicletas_eletricas.add(5);
+//			
+//		}
+			
+//			int[] bicicletas_eletricas = new int[5];
+//
+//	        for (int i = 0; i < bicicletas_eletricas.length; i++) {
+//	             bicicletas_eletricas[i] = i;
+//	        }
+//	        return bicicletas_eletricas;		
+//		}
+		
+	public void setBicicletas_eletricas(BicicletaEletrica [] bicicletas_eletricas) {
 		this.bicicletas_eletricas = bicicletas_eletricas;
 	}
 
@@ -47,15 +70,6 @@ public class Posto {
 
 	public void setBicicletas_normais(BicicletaNormal[] bicicletas_normais) {
 		this.bicicletas_normais = bicicletas_normais;
-	}
-
-	// Métodos para deletar bicicletas do array quando elas são retiradas pelo usuário
-	public void popBicicletas_eletricas(BicicletaEletrica[] bicicletas_eletricas) {
-		bicicletas_eletricas.pop(); // Está dando erro pq o Array está vazio!
-	}
-
-	public void popBicicletas_normais(BicicletaNormal[] bicicletas_normais) {
-		bicicletas_normais.pop(); // Está dando erro pq o Array está vazio!
 	}
 	
 	public int getEspacosOcupados() {
