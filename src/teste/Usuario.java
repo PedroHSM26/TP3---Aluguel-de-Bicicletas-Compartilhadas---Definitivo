@@ -180,7 +180,7 @@ public class Usuario {
 		this.posto = posto;
 	}
 
-	@Override
+	@Override //Sobrecarga do metodo toString() para realizar os testes do codigo
 	public String toString() {
 		return "Usuario [email=" + email + ", senha=" + senha + ", nomeCompleto=" + nomeCompleto + ", nacionalidade="
 				+ nacionalidade;

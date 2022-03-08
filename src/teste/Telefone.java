@@ -36,7 +36,7 @@ public class Telefone {
 	}
 	@Override
 	public String toString() {
-		return ""+ ddi+ ddd+ numero +"";
+		return ""+ ddi+ ddd+ numero;
 	}
 	
 }

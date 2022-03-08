@@ -17,7 +17,7 @@ public class TestarCodigo {
 		Date agora = d.getTime();
 		
 		t = new Telefone(61984, 61, 55);
-		t.setDdd(661);
+		t.setDdd(061);
 		t.setNumero(333333);
 		
 		System.out.println(u1.toString()); // Est� imprimindo o hashcode do objeto,assistir video da prof sobre conceitos estruturais

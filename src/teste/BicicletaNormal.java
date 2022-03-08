@@ -1,15 +1,16 @@
 package teste;
 
-public class BicicletaNormal {
+public class BicicletaNormal extends Bicicleta {
 	private Long marcha;
 	
 	public BicicletaNormal() {
 		super();
 	}
 	
-	// Também Colocar aqui os atributos e métodos da classe abstrata Bicicleta usando this
-	public BicicletaNormal(Long m) {
+	// Tambï¿½m Colocar aqui os atributos e mï¿½todos da classe abstrata Bicicleta usando this
+	public BicicletaNormal(Long m, int idBicicletaNormal) {
 		marcha = m;
+		idBicicleta = idBicicletaNormal;
 	}
 
 	public Long getMarcha() {

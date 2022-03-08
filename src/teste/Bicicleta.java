@@ -1,7 +1,7 @@
 package teste;
 
 public abstract class Bicicleta {
-	protected Long idBicicleta;
+	protected int idBicicleta;
 	protected Boolean estadoUso;
 	protected Double tempoUso;
 	protected Long idadeBicicleta;
@@ -12,10 +12,10 @@ public abstract class Bicicleta {
 	}
 	
 	
-	public Long getIdBicicleta() {
+	public int getIdBicicleta() {
 		return idBicicleta;
 	}
-	public void setIdBicicleta(Long idBicicleta) {
+	public void setIdBicicleta(int idBicicleta) {
 		this.idBicicleta = idBicicleta;
 	}
 	public Boolean getEstadoUso() {
