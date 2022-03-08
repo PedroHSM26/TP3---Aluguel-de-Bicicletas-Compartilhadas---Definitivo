@@ -14,14 +14,14 @@ public class TestarCodigo {
 		u1 = new Usuario("pedroarroba","senhaDois", "Pedro Henrique da Silva Melo ", "brasileiro");
 
 		GregorianCalendar d = new GregorianCalendar();
-		Date agora = d.getTime();
+		//Date agora = d.getTime();
 		
 		t = new Telefone(61984, 61, 55);
-		t.setDdd(661);
+		t.setDdd(061);
 		t.setNumero(333333);
 		
 		System.out.println(u1.toString()); // Est  imprimindo o hashcode do objeto,assistir video da prof sobre conceitos estruturais
-		System.out.println(agora.toString()); //Vai ter q ir no objeto u1 e escrever o toString l !
+		//System.out.println(agora.toString()); //Vai ter q ir no objeto u1 e escrever o toString l !
 		System.out.println(t.toString());
 	}
 
