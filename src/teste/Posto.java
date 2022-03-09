@@ -1,93 +1,61 @@
 package teste;
 
-import java.util.ArrayList;
 
 public class Posto {
-	private BicicletaEletrica[]  bicicletas_eletricas = new BicicletaEletrica[5]; //Colocar até 5 bicicletas nesse array
-	private BicicletaNormal[]  bicicletas_normais = new BicicletaNormal[5]; //Colocar até 5 bicicletas nesse array
-	private	int espacosOcupados = 10; //Precisamos manipular esta variável de acordo com o número de bicicletas alocadas.
-	private Usuario usuario;
 	
-	public Posto(){
-	    super();
+	private String localizacao;
+	private Integer totalBicicletas;
+	
+	public Posto(String localizacao, Integer totalBicicletas) {
+		super();
+		this.localizacao = localizacao;
+		this.totalBicicletas = totalBicicletas;
 	}
 	
-	
-	public Posto(int eo, Usuario u) {
-		usuario = u;
-		espacosOcupados = eo;
-	}
-
-	//Sobrecarga
-	public Posto(BicicletaEletrica[] bikeElec, BicicletaNormal[] bikeNor, int eo, Usuario u) {
-		usuario = u;
-		espacosOcupados = eo;
-		bicicletas_eletricas = bikeElec;
-		bicicletas_normais = bikeNor;
-	}
-	
-	
-	
-	// Analisar método getAluno e setAluno no objeto Curso do exemplo da prof
-	
-	
-	
-		public BicicletaEletrica[] getBicicletaEletrica() {
-			
-			return bicicletas_eletricas;
+	public void retirarBicicleta() {
+		if(this.getTotalBicicletas() != 0) {
+			this.totalBicicletas -= 1;
+			System.out.println("VocÃª retirou uma bicicleta do Posto de "+ this.getLocalizacao());
+			System.out.println("Agora restam " + this.getTotalBicicletas() + " bicicletas restantes");
+		}else {
+			System.out.println("NÃ£o hÃ¡ bicicletas a serem retiradas");
 		}
 		
-//		public static int[] getBicicletaEletrica() {
-			
-			
-//			ArrayList<BicicletaEletrica> bicicletas_eletricas = new ArrayList<BicicletaEletrica>();
-//			
-//			bicicletas_eletricas.add();
-//			bicicletas_eletricas.add(2);
-//			bicicletas_eletricas.add(3);
-//			bicicletas_eletricas.add(4);
-//			bicicletas_eletricas.add(5);
-//			
-//		}
-			
-//			int[] bicicletas_eletricas = new int[5];
-//
-//	        for (int i = 0; i < bicicletas_eletricas.length; i++) {
-//	             bicicletas_eletricas[i] = i;
-//	        }
-//	        return bicicletas_eletricas;		
-//		}
-		
-	public void setBicicletas_eletricas(BicicletaEletrica [] bicicletas_eletricas) {
-		this.bicicletas_eletricas = bicicletas_eletricas;
-	}
-
-
-	public BicicletaNormal[] getBicicletas_normais() {
-		return bicicletas_normais;
-	}
-
-
-	public void setBicicletas_normais(BicicletaNormal[] bicicletas_normais) {
-		this.bicicletas_normais = bicicletas_normais;
 	}
 	
-	public int getEspacosOcupados() {
-		return espacosOcupados;
+
+	public void devolverBicicleta() {
+		if(this.totalBicicletas == 10) {
+			System.out.println("NÃ£o hÃ¡ bicicletas a serem devolvidas");
+		}else {
+			this.totalBicicletas +=1;
+			System.out.println("VocÃª devolveu uma bicicleta ao posto");
+			System.out.println("Agora o posto possui: "+ this.getTotalBicicletas() + " bicicletas restantes");
+		}
+		
+	}
+	
+
+	public String getLocalizacao() {
+		return localizacao;
 	}
 
-
-	public void setEspacosOcupados(int espacosOcupados) {
-		this.espacosOcupados = espacosOcupados;
+	public void setLocalizacao(String localizacao) {
+		this.localizacao = localizacao;
 	}
 
-
-	public Usuario getUsuario() {
-		return usuario;
+	public Integer getTotalBicicletas() {
+		return totalBicicletas;
 	}
 
-
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	public void setTotalBicicletas(Integer totalBicicletas) {
+		this.totalBicicletas = totalBicicletas;
 	}
+	
+	public void retiraBicicleta(Integer qnt) {
+		this.totalBicicletas -= totalBicicletas;
+	}
+	
+	
+	
 }

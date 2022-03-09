@@ -10,180 +10,165 @@ public class Usuario {
 	private String nacionalidade;
 	private Date dataNascimento ;
 	private Long idUsuario ;
-	private int cpf;
+	private Integer cpf;
 	private PlanoAssinatura planoAssinado;
 	private Telefone numTel;
-	private Posto posto;
 	
-	public Usuario(String mail, String password, String name, String nac) { //Objeto usuário
+	
+	public Usuario(String email, String senha, String nomeCompleto, String nacionalidade,
+			PlanoAssinatura planoAssinado, Telefone telefone) {
+		super();
+		this.email = email;
+		this.senha = senha;
+		this.nomeCompleto = nomeCompleto;
+		this.nacionalidade = nacionalidade;
+		this.planoAssinado = planoAssinado;
+		this.numTel = telefone;
+	
+	}
+
+	
+	
+	public void retirarBicicleta(Integer qnt,Posto posto) {
+		if(posto.getTotalBicicletas() != 0) {
+			posto.setTotalBicicletas(-qnt);
+			System.out.println("Você retirou uma bicicleta do Posto de "+ posto.getLocalizacao());
+			System.out.println("Agora restam " + posto.getTotalBicicletas() + " bicicletas restantes");
+		}else {
+			System.out.println("Não há bicicletas a serem retiradas");
+		}
 		
-		email = mail;
-		senha = password;
-		nomeCompleto = name;
-		nacionalidade = nac;
 	}
 	
-	public Usuario(String mail, String password, String name, String nac, Date nasc, Long id, 
-			int cPF, Telefone num, PlanoAssinatura plano, Posto p) { //sobrecarga de metodo
-											
-		email = mail;
-		senha = password;
-		nomeCompleto = name;
-		nacionalidade = nac;
-		idUsuario = id;
-		cpf = cPF;
-		this.numTel = num; 
-		this.planoAssinado = plano;
-		this.posto = p;
-		
-	}
-	// M�todos para assinar um plano
-	public void assinarPlanoBicEletric() {
-		 PlanoAssinatura plano = this.getPlanoAssinado();
-		 plano.setTipoDePlano("Plano de Bicicleta El�trica");
-		 plano.setMetodoPagamento("Cart�o ou PIX");
-	 }	
-	
-	public void assinarPlanoBicNor() {
-		 PlanoAssinatura plano = this.getPlanoAssinado();
-		 plano.setTipoDePlano("Plano de Bicicleta Normal");
-		 plano.setMetodoPagamento("Cart�o ou PIX");
-	 }
-	
-	
-	// M�todo para retirar uma bicicleta e poder us�-la
-	
-	public void retirarBicicleta() {
-		int qtd;
-		BicicletaEletrica[] arrayBikes;
-		Posto p = this.getPosto();
-		PlanoAssinatura plano = this.getPlanoAssinado(); // !!!! Buscar arrumar este m�todo para ele conseguir influenciar no array de bicicletas.
-		if (plano.getTipoDePlano() == "Plano de Bicicleta El�trica") {
-			qtd = p.getEspacosOcupados();
-			arrayBikes = p.getBicicletaEletrica();
-			
-			p.setEspacosOcupados(qtd-1);
-		}
-		else {
-			qtd = p.getEspacosOcupados();
-			p.setBicicletas_normais(null);
-			p.setEspacosOcupados(qtd-1);
-		}
+
+	public void devolverBicicleta(Posto posto) {
+		posto.setTotalBicicletas(+1);
 	}
 	
-	// M�todo para devolver uma bicicleta ao Posto.
-	public void devolverBicicleta() {
-		int qtd;
-		int qtdBikeE;
-		int qtdBikeN;
-		PlanoAssinatura plano = this.getPlanoAssinado();
-		Posto p = this.getPosto();
-		if (p.getEspacosOcupados() < 10) {
-			qtd = p.getEspacosOcupados();
-			p.setEspacosOcupados(qtd+1);
-			if (plano.getTipoDePlano() == "Plano de Bicicleta El�trica") {
-				qtdBikeE = p.getBicicletas_eletricas();
-				p.setBicicletas_eletricas(qtdBikeE+1);
-			}
-			else {
-				qtdBikeN = p.getBicicletas_normais();
-				p.setBicicletas_normais(qtdBikeN+1);
-			}
-			
-		}
-	}
-	
-	
-	// Gets e Sets do Objeto Usu�rio
+
 	public String getEmail() {
 		return email;
 	}
+
+
 
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
+
+
 	public String getSenha() {
 		return senha;
 	}
+
+
 
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
 
+
+
 	public String getNomeCompleto() {
 		return nomeCompleto;
 	}
+
+
 
 	public void setNomeCompleto(String nomeCompleto) {
 		this.nomeCompleto = nomeCompleto;
 	}
 
+
+
 	public String getNacionalidade() {
 		return nacionalidade;
 	}
+
+
 
 	public void setNacionalidade(String nacionalidade) {
 		this.nacionalidade = nacionalidade;
 	}
 
+
+
 	public Date getDataNascimento() {
 		return dataNascimento;
 	}
+
+
 
 	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
+
+
 	public Long getIdUsuario() {
 		return idUsuario;
 	}
+
+
 
 	public void setIdUsuario(Long idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 
-	public int getCpf() {
+
+
+	public Integer getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+
+
+	public void setCpf(Integer cpf) {
 		this.cpf = cpf;
 	}
+
+
 
 	public PlanoAssinatura getPlanoAssinado() {
 		return planoAssinado;
 	}
 
+
+
 	public void setPlanoAssinado(PlanoAssinatura planoAssinado) {
 		this.planoAssinado = planoAssinado;
 	}
 
-	public Telefone getTel() {
-		return numTel;
-	}
 
-	public void setTel(Telefone tel) {
-		this.numTel = tel;
-	}
-	
+
 	public Telefone getNumTel() {
 		return numTel;
 	}
+
+
+
 	public void setNumTel(Telefone numTel) {
 		this.numTel = numTel;
 	}
-	public Posto getPosto() {
-		return posto;
-	}
-	public void setPosto(Posto posto) {
-		this.posto = posto;
-	}
+
+
 
 	@Override
 	public String toString() {
 		return "Email: " + email + "\nSenha: " + senha + "\nNome: " + nomeCompleto + "\nNacionalidade: "
 				+ nacionalidade;
+	}
+	
+	public void informacoesUsuario(Integer escolha) {
+		System.out.println("Nome: "+ this.nomeCompleto);
+		System.out.println("Email: "+ this.email);
+		System.out.println("Nacionalidade: "+ this.nacionalidade);
+	}
+	
+	public void informacoesUsuario() {
+		System.out.println("Numero de telefone: "+ this.numTel);
+	
 	}
 	
 }

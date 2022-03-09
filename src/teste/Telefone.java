@@ -1,39 +1,64 @@
 package teste;
 
 public class Telefone {
-	private int numero;
-	private int ddi;
-	private int ddd;
+	private Integer numero;
+	private Integer ddi;
+	private Integer ddd;
 	
-	public Telefone(int num, int dDI, int dDD) {
-		numero = num;
-		ddi = dDI;
-		ddd = dDD;
+	
+	
+	public Telefone(Integer ddi, Integer ddd, Integer numero) {
+		super();
+		this.numero = numero;
+		this.ddi = ddi;
+		this.ddd = ddd;
 	}
-	// Gets e Sets
-	public int getNumero() {
+
+	
+
+
+	public Integer getNumero() {
 		return numero;
 	}
 
-	public void setNumero(int numero) {
+
+
+
+	public void setNumero(Integer numero) {
 		this.numero = numero;
 	}
 
-	public int getDdi() {
+
+
+
+	public Integer getDdi() {
 		return ddi;
 	}
 
-	public void setDdi(int ddi) {
+
+
+
+	public void setDdi(Integer ddi) {
 		this.ddi = ddi;
 	}
 
-	public int getDdd() {
+
+
+
+	public Integer getDdd() {
 		return ddd;
 	}
 
-	public void setDdd(int ddd) {
+
+
+
+	public void setDdd(Integer ddd) {
 		this.ddd = ddd;
 	}
+
+
+
+
 	@Override
 	public String toString() {
 		return ""+ ddi+ ddd+ numero +"";
