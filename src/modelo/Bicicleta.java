@@ -1,4 +1,4 @@
-package teste;
+package modelo;
 
 public abstract class Bicicleta {
 	protected Integer idBicicleta;

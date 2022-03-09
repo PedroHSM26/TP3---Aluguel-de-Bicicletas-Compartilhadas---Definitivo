@@ -1,4 +1,4 @@
-package teste;
+package modelo;
 
 public class BicicletaEletrica extends Bicicleta {
 

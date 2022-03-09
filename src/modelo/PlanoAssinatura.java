@@ -1,4 +1,4 @@
-package teste;
+package modelo;
 
 public class PlanoAssinatura {
 	 private Integer valor;

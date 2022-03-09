@@ -1,4 +1,4 @@
-package teste;
+package modelo;
 
 public class Telefone {
 	private Integer numero;

@@ -1,4 +1,4 @@
-package teste;
+package modelo;
 
 import java.util.Date;
 
@@ -32,10 +32,10 @@ public class Usuario {
 	public void retirarBicicleta(Integer qnt,Posto posto) {
 		if(posto.getTotalBicicletas() != 0) {
 			posto.setTotalBicicletas(-qnt);
-			System.out.println("VocÃª retirou uma bicicleta do Posto de "+ posto.getLocalizacao());
+			System.out.println("Você retirou uma bicicleta do Posto de "+ posto.getLocalizacao());
 			System.out.println("Agora restam " + posto.getTotalBicicletas() + " bicicletas restantes");
 		}else {
-			System.out.println("NÃ£o hÃ¡ bicicletas a serem retiradas");
+			System.out.println("Não há¡ bicicletas a serem retiradas");
 		}
 		
 	}
