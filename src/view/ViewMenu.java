@@ -60,7 +60,7 @@ public class ViewMenu {
 			System.out.println("Digite seu telefone:");
 			Integer tel = sc1.nextInt();
 			
-			System.out.println("VocÃª prefere o plano de:");
+			System.out.println("Você prefere o plano de:");
 			System.out.println("1- Bicicletas Eletricas");
 			System.out.println("2- Bicicletas normais");
 			Integer escolhaPlano = sc1.nextInt();
@@ -119,13 +119,13 @@ public class ViewMenu {
 						posto1.devolverBicicleta();
 						System.out.println("------------------------------------");
 						System.out.println(" ");
-						System.out.println("O que vocÃª deseja fazer agora?");
+						System.out.println("O que você deseja fazer agora?");
 						System.out.println("1- Retirar bicicleta");
 						System.out.println("3- Informações da sua conta");
 						System.out.println("4- deletar sua conta ");
 						escolhaAcao = sc1.nextInt();
 					}else if(escolhaAcao == 3){
-						System.out.println("VocÃª deseja saber suas informações:");
+						System.out.println("Você deseja saber suas informações:");
 						System.out.println("1- De cadastro");
 						System.out.println("2- De telefone");
 						Integer escolhaInfo = sc1.nextInt();
