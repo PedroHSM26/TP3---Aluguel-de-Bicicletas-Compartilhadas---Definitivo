@@ -83,7 +83,7 @@ public class ViewMenu {
 				System.out.println("Usuario "+ u1.getNomeCompleto() + " Cadastrado com sucesso");
 				escolha = 2;
 			}else {
-				System.out.println("Opção escolhida diferente ");
+				System.out.println("Opcao escolhida diferente ");
 			}
 			
 		}
@@ -99,10 +99,10 @@ public class ViewMenu {
 			if(usr.get(i).getEmail().equals(login)) {
 				System.out.println("Usuario logado com sucesso");
 				System.out.println("");
-				System.out.println("O que você deseja fazer?");
+				System.out.println("O que vocï¿½ deseja fazer?");
 				System.out.println("1- Retirar bicicleta");
 				System.out.println("2- Devolver bicicleta");
-				System.out.println("3- Informações da sua conta");
+				System.out.println("3- Informacoes da sua conta");
 				System.out.println("4- Deletar conta");
 				Integer escolhaAcao = sc1.nextInt();
 				
@@ -112,9 +112,9 @@ public class ViewMenu {
 						
 						System.out.println("------------------------------------");
 						System.out.println(" ");
-						System.out.println("O que você deseja fazer agora?");
+						System.out.println("O que voce deseja fazer agora?");
 						System.out.println("2- Devolver bicicleta");
-						System.out.println("3- Informações da sua conta");
+						System.out.println("3- Informacoes da sua conta");
 						System.out.println("4- deletar sua conta ");
 						escolhaAcao = sc1.nextInt();
 					}else if(escolhaAcao == 2) {
@@ -123,39 +123,39 @@ public class ViewMenu {
 						System.out.println(" ");
 						System.out.println("O que vocÃª deseja fazer agora?");
 						System.out.println("1- Retirar bicicleta");
-						System.out.println("3- Informações da sua conta");
+						System.out.println("3- Informacoes da sua conta");
 						System.out.println("4- deletar sua conta ");
 						escolhaAcao = sc1.nextInt();
 					}else if(escolhaAcao == 3){
-						System.out.println("VocÃª deseja saber suas informações:");
+						System.out.println("VocÃª deseja saber suas informacoes:");
 						System.out.println("1- De cadastro");
 						System.out.println("2- De telefone");
 						Integer escolhaInfo = sc1.nextInt();
 						if(escolhaInfo == 1) {
 							usr.get(i).informacoesUsuario(1);
 							System.out.println("----------------------");
-							System.out.println("O que você deseja fazer?");
+							System.out.println("O que voce deseja fazer?");
 							System.out.println("1- Retirar bicicleta");
 							System.out.println("2- Devolver bicicleta");
-							System.out.println("3- Informações da sua conta");
+							System.out.println("3- Informacoes da sua conta");
 							System.out.println("4- Deletar conta");
 							escolhaAcao = sc1.nextInt();
 						}else if(escolhaInfo == 2) {
 							usr.get(i).informacoesUsuario();
 							System.out.println("----------------------");
-							System.out.println("O que você deseja fazer?");
+							System.out.println("O que voce deseja fazer?");
 							System.out.println("1- Retirar bicicleta");
 							System.out.println("2- Devolver bicicleta");
-							System.out.println("3- Informações da sua conta");
+							System.out.println("3- Informacoes da sua conta");
 							System.out.println("4- Deletar conta");
 							escolhaAcao = sc1.nextInt();
 						}else {
-							System.out.println("Opção invalida");
+							System.out.println("Opcao invalida");
 							System.out.println("");
-							System.out.println("O que você deseja fazer?");
+							System.out.println("O que voce deseja fazer?");
 							System.out.println("1- Retirar bicicleta");
 							System.out.println("2- Devolver bicicleta");
-							System.out.println("3- Informações da sua conta");
+							System.out.println("3- Informacoes da sua conta");
 							System.out.println("4- Deletar conta");
 							escolhaAcao = sc1.nextInt();
 						}
@@ -181,4 +181,3 @@ public class ViewMenu {
 	}
 
 }
-
