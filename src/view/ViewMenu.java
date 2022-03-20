@@ -11,9 +11,7 @@ import modelo.Telefone;
 import modelo.Usuario;
 
 public class ViewMenu {
-
-	public ViewMenu() {
-	}
+	
 	static Scanner sc1 = new Scanner(System.in);
 	public static void main(String[] args) {
 		
