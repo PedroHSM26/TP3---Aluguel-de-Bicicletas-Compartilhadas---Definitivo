@@ -53,7 +53,7 @@ public class TestarCodigo {
 			System.out.println("Digite seu telefone:");
 			Integer tel = sc1.nextInt();
 			
-			System.out.println("Você prefere o plano de:");
+			System.out.println("Voce prefere o plano de:");
 			System.out.println("1- Bicicletas Eletricas");
 			System.out.println("2- Bicicletas normais");
 			Integer escolhaPlano = sc1.nextInt();
