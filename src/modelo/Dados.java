@@ -3,9 +3,10 @@ package modelo;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class TestarCodigo {
+public class Dados {
 	
 	static Scanner sc1 = new Scanner(System.in);
+	
 	public static void main(String[] args) {
 		
 		BicicletaNormal[] bikeN  = new BicicletaNormal[5];
