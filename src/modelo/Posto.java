@@ -3,8 +3,8 @@ package modelo;
 
 public class Posto {
 	
-	private String localizacao;
-	private Integer totalBicicletas;
+	private String localizacao; //Localizacao do posto
+	private Integer totalBicicletas; //Total de armazenamento de bicicletas
 	
 	public Posto(String localizacao, Integer totalBicicletas) {
 		super();
@@ -12,7 +12,7 @@ public class Posto {
 		this.totalBicicletas = totalBicicletas;
 	}
 	
-	public void retirarBicicleta() {
+	public void retirarBicicleta() { //Metoodo de retirar bicicleta
 		if(this.getTotalBicicletas() != 0) {
 			this.totalBicicletas -= 1;
 			System.out.println("Você retirou uma bicicleta do Posto de "+ this.getLocalizacao());
@@ -24,7 +24,7 @@ public class Posto {
 	}
 	
 
-	public void devolverBicicleta() {
+	public void devolverBicicleta() { //Metodo de devolver bicicleta
 		if(this.totalBicicletas == 10) {
 			System.out.println("Não há bicicletas a serem devolvidas");
 		}else {

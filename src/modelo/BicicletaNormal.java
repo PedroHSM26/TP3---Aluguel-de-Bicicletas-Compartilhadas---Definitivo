@@ -2,7 +2,7 @@ package modelo;
 
 public class BicicletaNormal extends Bicicleta {
 
-	private Integer marcha;
+	private Integer marcha; //Tempo de vida da marcha (***)
 	
 	public BicicletaNormal(Integer idBicicleta, Boolean estadoUso, Double tempoUso, Integer idadeBicicleta,
 			String qrCode, Integer marcha, Posto posto) {
