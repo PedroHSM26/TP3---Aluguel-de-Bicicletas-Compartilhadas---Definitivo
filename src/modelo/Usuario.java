@@ -4,15 +4,15 @@ import java.util.Date;
 
 public class Usuario {
 	
-	private String email;
-	private String senha;
-	private String nomeCompleto;
-	private String nacionalidade;
-	private Date dataNascimento ;
-	private Long idUsuario ;
-	private Integer cpf;
-	private PlanoAssinatura planoAssinado;
-	private Telefone numTel;
+	private String email; //Email do usuario no formato email@email.com do usuario
+	private String senha; //Senha do usuario sem limitacao de tamanho ou tipo de caracter do usuario
+	private String nomeCompleto; //Nome completo do usuario
+	private String nacionalidade; //Nacionalidade do usuario
+	private Date dataNascimento; //Data de Nascimento do usuario
+	private Long idUsuario; //Identificador do usuario (***)
+	private Integer cpf; //CPF do usuario (***)
+	private PlanoAssinatura planoAssinado; //Plano que foi assinado pelo usuario
+	private Telefone numTel; //Telefone do usuario
 	
 	
 	public Usuario(String email, String senha, String nomeCompleto, String nacionalidade,
@@ -29,13 +29,13 @@ public class Usuario {
 
 	
 	
-	public void retirarBicicleta(Integer qnt,Posto posto) {
+	public void retirarBicicleta(Integer qnt,Posto posto) { //Metodo de retirada de bicicleta do posto (***)
 		if(posto.getTotalBicicletas() != 0) {
 			posto.setTotalBicicletas(-qnt);
-			System.out.println("Você retirou uma bicicleta do Posto de "+ posto.getLocalizacao());
+			System.out.println("Voce retirou uma bicicleta do Posto de "+ posto.getLocalizacao());
 			System.out.println("Agora restam " + posto.getTotalBicicletas() + " bicicletas restantes");
 		}else {
-			System.out.println("Não há¡ bicicletas a serem retiradas");
+			System.out.println("Nao ha bicicletas a serem retiradas");
 		}
 		
 	}

@@ -1,9 +1,9 @@
 package modelo;
 
 public class PlanoAssinatura {
-	 private Integer valor;
-	 private String tipoDePlano;
-	 private String metodoPagamento;
+	 private Integer valor; //Valor a ser cobrado pelo plano
+	 private String tipoDePlano; //Plano de bicicleta eletrica ou plano de bicicleta normal
+	 private String metodoPagamento; //Em dinheiro ou cartao
 	
 	
 	 
