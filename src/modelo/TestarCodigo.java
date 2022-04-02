@@ -8,21 +8,21 @@ public class TestarCodigo {
 	static Scanner sc1 = new Scanner(System.in);
 	public static void main(String[] args) {
 		
-		BicicletaNormal[] bikeN  = new BicicletaNormal[5];
-		BicicletaEletrica[] bikeE = new BicicletaEletrica[5];
+		BicicletaNormal[] bikeN  = new BicicletaNormal[5]; //Cria o array de bicicletaNormal com 5 lugares
+		BicicletaEletrica[] bikeE = new BicicletaEletrica[5]; //Cria o array de bicicletaEletrica com 5 lugares
 		Posto posto = new Posto("", 0);
 		
-		bikeN[0] = new BicicletaNormal(1, true, 34.0, 4, 7, posto);
-		bikeN[1] = new BicicletaNormal(1, true, 34.0, 4, 7, posto);
-		bikeN[2] = new BicicletaNormal(1, true, 34.0, 4, 7, posto);
-		bikeN[3] = new BicicletaNormal(1, true, 34.0, 4, 7, posto);
-		bikeN[4] = new BicicletaNormal(1, true, 34.0, 4, 7, posto);
+		bikeN[0] = new BicicletaNormal(1, true, 34.0, 4, 0, posto); //idBicicleta, estadoUso, tempoUso, idadeBicicleta, tipoBicicleta, Posto
+		bikeN[1] = new BicicletaNormal(2, true, 34.0, 4, 0, posto); // ""
+		bikeN[2] = new BicicletaNormal(3, true, 34.0, 4, 0, posto); // ""
+		bikeN[3] = new BicicletaNormal(4, true, 34.0, 4, 0, posto); // ""
+		bikeN[4] = new BicicletaNormal(5, true, 34.0, 4, 0, posto); // ""
 		
-		bikeE[0] = new BicicletaEletrica(1, true, 34.0, 4, 7, posto);
-		bikeE[1] = new BicicletaEletrica(1, true, 34.0, 4, 7, posto);
-		bikeE[2] = new BicicletaEletrica(1, true, 34.0, 4, 7, posto);
-		bikeE[3] = new BicicletaEletrica(1, true, 34.0, 4, 7, posto);
-		bikeE[4] = new BicicletaEletrica(1, true, 34.0, 4, 7, posto);
+		bikeE[0] = new BicicletaEletrica(6, true, 34.0, 4, 1, 100, posto); //idBicicleta, estadoUso, tempoUso, idadeBicicleta, tipoBicicleta, energia restante, Posto
+		bikeE[1] = new BicicletaEletrica(7, true, 34.0, 4, 1, 100, posto); // ""
+		bikeE[2] = new BicicletaEletrica(8, true, 34.0, 4, 1, 100, posto); // ""
+		bikeE[3] = new BicicletaEletrica(9, true, 34.0, 4, 1, 100, posto); // ""
+		bikeE[4] = new BicicletaEletrica(10, true, 34.0, 4, 1, 100, posto); // ""
 		
 		Posto posto1 = new Posto("Belford Roxo", bikeN.length + bikeE.length );
 		
