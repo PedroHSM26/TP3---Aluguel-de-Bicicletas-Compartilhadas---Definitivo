@@ -3,27 +3,26 @@ package modelo;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class Dados {
+public class TestarCodigo {
 	
 	static Scanner sc1 = new Scanner(System.in);
-	
 	public static void main(String[] args) {
 		
 		BicicletaNormal[] bikeN  = new BicicletaNormal[5];
 		BicicletaEletrica[] bikeE = new BicicletaEletrica[5];
 		Posto posto = new Posto("", 0);
 		
-		bikeN[0] = new BicicletaNormal(1, true, 34.0, 4, "gjgjgjg", 7, posto);
-		bikeN[1] = new BicicletaNormal(1, true, 34.0, 4, "gjgjgjg", 7, posto);
-		bikeN[2] = new BicicletaNormal(1, true, 34.0, 4, "gjgjgjg", 7, posto);
-		bikeN[3] = new BicicletaNormal(1, true, 34.0, 4, "gjgjgjg", 7, posto);
-		bikeN[4] = new BicicletaNormal(1, true, 34.0, 4, "gjgjgjg", 7, posto);
+		bikeN[0] = new BicicletaNormal(1, true, 34.0, 4, 7, posto);
+		bikeN[1] = new BicicletaNormal(1, true, 34.0, 4, 7, posto);
+		bikeN[2] = new BicicletaNormal(1, true, 34.0, 4, 7, posto);
+		bikeN[3] = new BicicletaNormal(1, true, 34.0, 4, 7, posto);
+		bikeN[4] = new BicicletaNormal(1, true, 34.0, 4, 7, posto);
 		
-		bikeE[0] = new BicicletaEletrica(1, true, 34.0, 4, "gjgjgjg", 7, posto);
-		bikeE[1] = new BicicletaEletrica(1, true, 34.0, 4, "gjgjgjg", 7, posto);
-		bikeE[2] = new BicicletaEletrica(1, true, 34.0, 4, "gjgjgjg", 7, posto);
-		bikeE[3] = new BicicletaEletrica(1, true, 34.0, 4, "gjgjgjg", 7, posto);
-		bikeE[4] = new BicicletaEletrica(1, true, 34.0, 4, "gjgjgjg", 7, posto);
+		bikeE[0] = new BicicletaEletrica(1, true, 34.0, 4, 7, posto);
+		bikeE[1] = new BicicletaEletrica(1, true, 34.0, 4, 7, posto);
+		bikeE[2] = new BicicletaEletrica(1, true, 34.0, 4, 7, posto);
+		bikeE[3] = new BicicletaEletrica(1, true, 34.0, 4, 7, posto);
+		bikeE[4] = new BicicletaEletrica(1, true, 34.0, 4, 7, posto);
 		
 		Posto posto1 = new Posto("Belford Roxo", bikeN.length + bikeE.length );
 		
@@ -75,7 +74,7 @@ public class Dados {
 				System.out.println("Usuario "+ u1.getNomeCompleto() + " Cadastrado com sucesso");
 				escolha = 2;
 			}else {
-				System.out.println("Opção escolhida diferente ");
+				System.out.println("Opï¿½ï¿½o escolhida diferente ");
 			}
 			
 		}
@@ -91,10 +90,10 @@ public class Dados {
 			if(usr.get(i).getEmail().equals(login)) {
 				System.out.println("Usuario logado com sucesso");
 				System.out.println("");
-				System.out.println("O que você deseja fazer?");
+				System.out.println("O que vocï¿½ deseja fazer?");
 				System.out.println("1- Retirar bicicleta");
 				System.out.println("2- Devolver bicicleta");
-				System.out.println("3- Informações da sua conta");
+				System.out.println("3- Informaï¿½ï¿½es da sua conta");
 				System.out.println("4- Deletar conta");
 				Integer escolhaAcao = sc1.nextInt();
 				
@@ -104,9 +103,9 @@ public class Dados {
 						
 						System.out.println("------------------------------------");
 						System.out.println(" ");
-						System.out.println("O que você deseja fazer agora?");
+						System.out.println("O que vocï¿½ deseja fazer agora?");
 						System.out.println("2- Devolver bicicleta");
-						System.out.println("3- Informações da sua conta");
+						System.out.println("3- Informaï¿½ï¿½es da sua conta");
 						System.out.println("4- deletar sua conta ");
 						escolhaAcao = sc1.nextInt();
 					}else if(escolhaAcao == 2) {
@@ -115,39 +114,39 @@ public class Dados {
 						System.out.println(" ");
 						System.out.println("O que vocÃª deseja fazer agora?");
 						System.out.println("1- Retirar bicicleta");
-						System.out.println("3- Informações da sua conta");
+						System.out.println("3- Informaï¿½ï¿½es da sua conta");
 						System.out.println("4- deletar sua conta ");
 						escolhaAcao = sc1.nextInt();
 					}else if(escolhaAcao == 3){
-						System.out.println("VocÃª deseja saber suas informações:");
+						System.out.println("VocÃª deseja saber suas informaï¿½ï¿½es:");
 						System.out.println("1- De cadastro");
 						System.out.println("2- De telefone");
 						Integer escolhaInfo = sc1.nextInt();
 						if(escolhaInfo == 1) {
 							usr.get(i).informacoesUsuario(1);
 							System.out.println("----------------------");
-							System.out.println("O que você deseja fazer?");
+							System.out.println("O que vocï¿½ deseja fazer?");
 							System.out.println("1- Retirar bicicleta");
 							System.out.println("2- Devolver bicicleta");
-							System.out.println("3- Informações da sua conta");
+							System.out.println("3- Informaï¿½ï¿½es da sua conta");
 							System.out.println("4- Deletar conta");
 							escolhaAcao = sc1.nextInt();
 						}else if(escolhaInfo == 2) {
 							usr.get(i).informacoesUsuario();
 							System.out.println("----------------------");
-							System.out.println("O que você deseja fazer?");
+							System.out.println("O que vocï¿½ deseja fazer?");
 							System.out.println("1- Retirar bicicleta");
 							System.out.println("2- Devolver bicicleta");
-							System.out.println("3- Informações da sua conta");
+							System.out.println("3- Informaï¿½ï¿½es da sua conta");
 							System.out.println("4- Deletar conta");
 							escolhaAcao = sc1.nextInt();
 						}else {
-							System.out.println("Opção invalida");
+							System.out.println("Opï¿½ï¿½o invalida");
 							System.out.println("");
-							System.out.println("O que você deseja fazer?");
+							System.out.println("O que vocï¿½ deseja fazer?");
 							System.out.println("1- Retirar bicicleta");
 							System.out.println("2- Devolver bicicleta");
-							System.out.println("3- Informações da sua conta");
+							System.out.println("3- Informaï¿½ï¿½es da sua conta");
 							System.out.println("4- Deletar conta");
 							escolhaAcao = sc1.nextInt();
 						}
