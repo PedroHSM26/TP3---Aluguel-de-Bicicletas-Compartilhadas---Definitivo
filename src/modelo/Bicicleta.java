@@ -5,13 +5,15 @@ public abstract class Bicicleta {
 	protected Boolean estadoUso; //A bicicleta esta em uso ou livre
 	protected Double tempoUso; //Quantidade de tempo que um usuario esta utilizando a bicicleta
 	protected Integer idadeBicicleta; //Tempo de vida da bicicleta
+	protected Integer tipoBicicleta; //Tipo da bicicleta = eletrica (0) ou normal (1)
 	
-	public Bicicleta(Integer idBicicleta, Boolean estadoUso, Double tempoUso, Integer idadeBicicleta) { //constructor do objeto bicicleta
+	public Bicicleta(Integer idBicicleta, Boolean estadoUso, Double tempoUso, Integer idadeBicicleta, Integer tipoBicicleta) { //constructor do objeto bicicleta
 		super();
 		this.idBicicleta = idBicicleta;
 		this.estadoUso = estadoUso;
 		this.tempoUso = tempoUso;
 		this.idadeBicicleta = idadeBicicleta;
+		this.tipoBicicleta = tipoBicicleta;
 	}
 
 	public Integer getIdBicicleta() {
@@ -44,6 +46,14 @@ public abstract class Bicicleta {
 
 	public void setIdadeBicicleta(Integer idadeBicicleta) {
 		this.idadeBicicleta = idadeBicicleta;
+	}
+	
+	public Integer getTipoBicicleta() {
+		return tipoBicicleta;
+	}
+
+	public void setTipoBicicleta(Integer tipoBicicleta) {
+		this.tipoBicicleta = tipoBicicleta;
 	}
 
 }
