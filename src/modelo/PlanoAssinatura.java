@@ -16,8 +16,8 @@ public class PlanoAssinatura {
 		return tipoPlano;
 	}
 
-	public void setTipoPlano(String tipoDePlano) {
-		this.tipoPlano = tipoDePlano;
+	public void setTipoPlano(String tipoPlano) {
+		this.tipoPlano = tipoPlano;
 	}
 
 	 
