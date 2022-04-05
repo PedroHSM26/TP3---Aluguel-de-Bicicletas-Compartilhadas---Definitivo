@@ -2,8 +2,29 @@ package modelo;
 
 public class BicicletaNormal extends Bicicleta {
 	
-	public BicicletaNormal(Integer idBicicleta, Boolean estadoUso, Double tempoUso, Integer idadeBicicleta, Integer tipoBicicleta, Posto posto) {
-		super(idBicicleta, estadoUso, tempoUso, idadeBicicleta, tipoBicicleta);
+	private Integer tamanhoAro, qntdMarchas; // Tamanho da roda (26 ou 29); Quantidade de Marchas (1 ate 6)
+	
+	public BicicletaNormal(Integer idBicicleta, Boolean estadoUso, Integer idadeBicicleta, Integer tipoBicicleta, Posto posto, Integer tamanhoAro, Integer qntdMarchas) {
+		super(idBicicleta, estadoUso, idadeBicicleta, tipoBicicleta);
+		this.setTamanhoAro(tamanhoAro);
+		this.setQntdMarchas(qntdMarchas);
+	}
+
+	public Integer getQntdMarchas() {
+		return qntdMarchas;
+	}
+
+	public void setQntdMarchas(Integer qntdMarchas) {
+		this.qntdMarchas = qntdMarchas;
+	}
+
+
+	public Integer getTamanhoAro() {
+		return tamanhoAro;
+	}
+
+	public void setTamanhoAro(Integer tamanhoAro) {
+		this.tamanhoAro = tamanhoAro;
 	}
 
 }

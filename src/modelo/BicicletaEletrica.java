@@ -4,9 +4,9 @@ public class BicicletaEletrica extends Bicicleta {
 
 	private Integer energia; //Quantidade de energia da bicicleta eletrica (***)
 	
-	public BicicletaEletrica(Integer idBicicleta, Boolean estadoUso, Double tempoUso, Integer idadeBicicleta, Integer tipoBicicleta, Integer energia, Posto posto) { //Constructor da bicicleta eletrica
+	public BicicletaEletrica(Integer idBicicleta, Boolean estadoUso, Integer idadeBicicleta, Integer tipoBicicleta, Integer energia, Posto posto) { //Constructor da bicicleta eletrica
 		
-		super(idBicicleta, estadoUso, tempoUso, idadeBicicleta, tipoBicicleta);
+		super(idBicicleta, estadoUso, idadeBicicleta, tipoBicicleta);
 		this.setEnergia(energia);
 		
 	}
