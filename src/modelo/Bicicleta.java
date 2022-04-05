@@ -3,14 +3,12 @@ package modelo;
 public abstract class Bicicleta {
 	protected Integer idBicicleta; //Identificador da bicileta
 	protected Boolean ocupacao; //A bicicleta esta em uso ou livre
-	protected Integer idadeBicicleta; //Tempo de vida da bicicleta
 	protected Integer tipoBicicleta; //Tipo da bicicleta = eletrica (0) ou normal (1)
 	
-	public Bicicleta(Integer idBicicleta, Boolean ocupacao, Integer idadeBicicleta, Integer tipoBicicleta) { //constructor do objeto bicicleta
+	public Bicicleta(Integer idBicicleta, Boolean ocupacao, Integer tipoBicicleta) { //constructor do objeto bicicleta
 		super();
 		this.idBicicleta = idBicicleta;
 		this.ocupacao = ocupacao;
-		this.idadeBicicleta = idadeBicicleta;
 		this.tipoBicicleta = tipoBicicleta;
 	}
 
@@ -28,14 +26,6 @@ public abstract class Bicicleta {
 
 	public void setEstadoUso(Boolean estadoUso) {
 		this.ocupacao = estadoUso;
-	}
-
-	public Integer getIdadeBicicleta() {
-		return idadeBicicleta;
-	}
-
-	public void setIdadeBicicleta(Integer idadeBicicleta) {
-		this.idadeBicicleta = idadeBicicleta;
 	}
 	
 	public Integer getTipoBicicleta() {

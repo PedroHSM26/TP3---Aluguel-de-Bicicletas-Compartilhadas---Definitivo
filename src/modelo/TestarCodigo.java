@@ -12,17 +12,17 @@ public class TestarCodigo {
 		BicicletaEletrica[] bikeE = new BicicletaEletrica[5]; //Cria o array de bicicletaEletrica com 5 lugares
 		Posto posto = new Posto("", 0);
 		
-		bikeN[0] = new BicicletaNormal(1, true, 4, 0, posto, 26, 6); //idBicicleta, ocupacao, idadeBicicleta, tipoBicicleta, Posto, TamanhoAro, QntdMarchas
-		bikeN[1] = new BicicletaNormal(2, true, 4, 0, posto, 26, 6); // ""
-		bikeN[2] = new BicicletaNormal(3, true, 4, 0, posto, 26, 6); // ""
-		bikeN[3] = new BicicletaNormal(4, true, 4, 0, posto, 26, 6); // ""
-		bikeN[4] = new BicicletaNormal(5, true, 4, 0, posto, 26, 6); // ""
+		bikeN[0] = new BicicletaNormal(1, true, 0, posto, 26, 6); //idBicicleta, ocupacao, tipoBicicleta, Posto, TamanhoAro, QntdMarchas
+		bikeN[1] = new BicicletaNormal(2, true, 0, posto, 26, 6); // ""
+		bikeN[2] = new BicicletaNormal(3, true, 0, posto, 26, 6); // ""
+		bikeN[3] = new BicicletaNormal(4, true, 0, posto, 26, 6); // ""
+		bikeN[4] = new BicicletaNormal(5, true, 0, posto, 26, 6); // ""
 		
-		bikeE[0] = new BicicletaEletrica(6, true, 4, 1, 100, posto); //idBicicleta, ocupacao, idadeBicicleta, tipoBicicleta, energia restante, Posto
-		bikeE[1] = new BicicletaEletrica(7, true, 4, 1, 100, posto); // ""
-		bikeE[2] = new BicicletaEletrica(8, true, 4, 1, 100, posto); // ""
-		bikeE[3] = new BicicletaEletrica(9, true, 4, 1, 100, posto); // ""
-		bikeE[4] = new BicicletaEletrica(10, true, 4, 1, 100, posto); // ""
+		bikeE[0] = new BicicletaEletrica(6, true, 1, 100, posto); //idBicicleta, ocupacao, tipoBicicleta, energia restante, Posto
+		bikeE[1] = new BicicletaEletrica(7, true, 1, 100, posto); // ""
+		bikeE[2] = new BicicletaEletrica(8, true, 1, 100, posto); // ""
+		bikeE[3] = new BicicletaEletrica(9, true, 1, 100, posto); // ""
+		bikeE[4] = new BicicletaEletrica(10, true, 1, 100, posto); // ""
 		
 		Posto posto1 = new Posto("Belford Roxo", bikeN.length + bikeE.length );
 		
