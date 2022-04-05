@@ -1,19 +1,18 @@
 package view;
 
-import java.util.LinkedList;
-import java.util.Scanner;
+//import java.util.LinkedList;
+//import java.util.Scanner;
 
-import modelo.BicicletaEletrica;
-import modelo.BicicletaNormal;
-import modelo.PlanoAssinatura;
-import modelo.Posto;
-import modelo.Telefone;
-import modelo.Usuario;
+//import modelo.BicicletaEletrica;
+//import modelo.BicicletaNormal;
+//import modelo.PlanoAssinatura;
+//import modelo.Posto;
+//import modelo.Usuario;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import controle.*;
+//import controle.*;
 
 public class TelaMenu implements ActionListener {
 		private static JFrame janela = new JFrame("Controle de Bicicletas Compartilhadas");
@@ -48,7 +47,7 @@ public class TelaMenu implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
 		
-		// Seção que deve ser usada quando construir a TelaPosto, TelaUsuario e TelaPlanoAssinatura
+		// Seï¿½ï¿½o que deve ser usada quando construir a TelaPosto, TelaUsuario e TelaPlanoAssinatura
 		
 //		if (src == posto) {
 //			new TelaPosto.mostrarDados();

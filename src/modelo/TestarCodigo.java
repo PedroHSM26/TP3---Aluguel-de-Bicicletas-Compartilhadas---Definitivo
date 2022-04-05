@@ -48,16 +48,6 @@ public class TestarCodigo {
 				System.out.println("Digite o nome completo:");
 				String nome = sc1.next();
 				sc1.nextLine();
-				System.out.println("Digite a nacionalidade:");
-				String nacionalidade = sc1.next();
-				
-				System.out.println("---------------Telefone----------------"); //Telefone
-				System.out.println("digite seu DDI (identificador internacional): ");
-				Integer ddi = sc1.nextInt();
-				System.out.println("Digite seu DDD (identificador nacional):");
-				Integer ddd = sc1.nextInt();
-				System.out.println("Digite seu telefone:");
-				Integer tel = sc1.nextInt();
 				
 				
 				System.out.println("Voce prefere o plano de:");
@@ -67,14 +57,14 @@ public class TestarCodigo {
 				switch (escolhaPlano) {
 				case 1: //Plano Bicicleta eletrica
 					
-					PlanoAssinatura planoEletrico = new PlanoAssinatura(40, "Plano de Bicicleta Eletrica", "Cartao ou PIX");
+					PlanoAssinatura planoEletrico = new PlanoAssinatura("Plano de Bicicleta Eletrica");
 					Usuario u1 = new Usuario(email, senha, nome, planoEletrico);
 					
 					usr.add(u1);
 					System.out.println("Usuario "+ u1.getNomeCompleto() + " Cadastrado com sucesso");
 					break; 
 				case 2:	//Plano Bicicleta normal
-					PlanoAssinatura planoNormal = new PlanoAssinatura(40, "Plano de Bicicleta Normal", "Cartao ou PIX");
+					PlanoAssinatura planoNormal = new PlanoAssinatura("Plano de Bicicleta Normal");
 					Usuario u2 = new Usuario(email, senha, nome, planoNormal); // (***)
 					usr.add(u2); // (***)
 					System.out.println("Usuario "+ u2.getNomeCompleto() + " Cadastrado com sucesso");
@@ -122,7 +112,7 @@ public class TestarCodigo {
 								case 3: //Informacoes do usuario
 									System.out.println("Você deseja saber suas informa��es:");
 									System.out.println("1- De cadastro");
-									System.out.println("2- De telefone");
+									System.out.println("2- ");
 									Integer escolhaInfo = sc1.nextInt();
 									switch (escolhaInfo) {
 										case 1: //Informacoes de cadastro (***)
