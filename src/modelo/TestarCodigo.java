@@ -12,13 +12,13 @@ public class TestarCodigo {
 		BicicletaEletrica[] bikeE = new BicicletaEletrica[5]; //Cria o array de bicicletaEletrica com 5 lugares
 		Posto posto = new Posto("", 0);
 		
-		bikeN[0] = new BicicletaNormal(1, true, 34.0, 4, 0, posto); //idBicicleta, estadoUso, tempoUso, idadeBicicleta, tipoBicicleta, Posto
+		bikeN[0] = new BicicletaNormal(1, true, 34.0, 4, 0, posto); //idBicicleta, ocupacao, tempoUso, idadeBicicleta, tipoBicicleta, Posto
 		bikeN[1] = new BicicletaNormal(2, true, 34.0, 4, 0, posto); // ""
 		bikeN[2] = new BicicletaNormal(3, true, 34.0, 4, 0, posto); // ""
 		bikeN[3] = new BicicletaNormal(4, true, 34.0, 4, 0, posto); // ""
 		bikeN[4] = new BicicletaNormal(5, true, 34.0, 4, 0, posto); // ""
 		
-		bikeE[0] = new BicicletaEletrica(6, true, 34.0, 4, 1, 100, posto); //idBicicleta, estadoUso, tempoUso, idadeBicicleta, tipoBicicleta, energia restante, Posto
+		bikeE[0] = new BicicletaEletrica(6, true, 34.0, 4, 1, 100, posto); //idBicicleta, ocupacao, tempoUso, idadeBicicleta, tipoBicicleta, energia restante, Posto
 		bikeE[1] = new BicicletaEletrica(7, true, 34.0, 4, 1, 100, posto); // ""
 		bikeE[2] = new BicicletaEletrica(8, true, 34.0, 4, 1, 100, posto); // ""
 		bikeE[3] = new BicicletaEletrica(9, true, 34.0, 4, 1, 100, posto); // ""
@@ -34,7 +34,7 @@ public class TestarCodigo {
 			System.out.println("1. Cadastrar");
 			System.out.println("2. Logar");
 			System.out.println("3. Encerrar programa");
-			System.out.print("Digite a opcao (1 ou 2): ");
+			System.out.print("Digite a opcao (1, 2 ou 3): ");
 			escolha = sc1.nextInt();
 			
 			switch (escolha) {			
@@ -68,20 +68,18 @@ public class TestarCodigo {
 				case 1: //Plano Bicicleta eletrica
 					
 					PlanoAssinatura planoEletrico = new PlanoAssinatura(40, "Plano de Bicicleta Eletrica", "Cartao ou PIX");
-					Telefone t1 = new Telefone(ddi, ddd, tel);
-					Usuario u1 = new Usuario(email, senha, nome, nacionalidade, planoEletrico, t1);
+					Usuario u1 = new Usuario(email, senha, nome, planoEletrico);
 					
 					usr.add(u1);
 					System.out.println("Usuario "+ u1.getNomeCompleto() + " Cadastrado com sucesso");
 					break; 
 				case 2:	//Plano Bicicleta normal
 					PlanoAssinatura planoNormal = new PlanoAssinatura(40, "Plano de Bicicleta Normal", "Cartao ou PIX");
-					Telefone t2 = new Telefone(ddi, ddd, tel);
-					Usuario u2 = new Usuario(email, senha, nome, nacionalidade, planoNormal, t2);
-					usr.add(u2);
+					Usuario u2 = new Usuario(email, senha, nome, planoNormal); // (***)
+					usr.add(u2); // (***)
 					System.out.println("Usuario "+ u2.getNomeCompleto() + " Cadastrado com sucesso");
 					break;
-				case 3: //Escolher depois
+				case 3: //Encerrar programa
 					break;
 				default: //Outra opcao
 					escolhaPlano = 0;
@@ -109,6 +107,7 @@ public class TestarCodigo {
 							System.out.println("2- Devolver bicicleta");
 							System.out.println("3- Informa��es da sua conta");
 							System.out.println("4- Deletar conta");
+							System.out.println("5- Sair");
 							escolhaAcao = sc1.nextInt();
 							
 							switch (escolhaAcao) {//acao bicicleta
@@ -129,8 +128,8 @@ public class TestarCodigo {
 										case 1: //Informacoes de cadastro (***)
 											usr.get(i).informacoesUsuario(1);
 											break;
-										case 2: //Informacoes de telefone do usuario (***)
-											usr.get(i).informacoesUsuario();
+										case 2: //OBJETO TELEFONE REMOVIDO
+											
 											break;
 										default: //Opcao invalida
 											System.out.println("Opcao invalida");
@@ -143,7 +142,7 @@ public class TestarCodigo {
 									usr.remove(i);
 									System.out.println("Conta deletada");
 									break;
-								case 5:
+								case 5: //Sair da conta
 									break;
 								default:
 									break;

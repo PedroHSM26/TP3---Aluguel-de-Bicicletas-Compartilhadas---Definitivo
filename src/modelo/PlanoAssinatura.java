@@ -2,15 +2,15 @@ package modelo;
 
 public class PlanoAssinatura {
 	 private Integer valor; //Valor a ser cobrado pelo plano
-	 private String tipoDePlano; //Plano de bicicleta eletrica ou plano de bicicleta normal
-	 private String metodoPagamento; //Em dinheiro ou cartao
+	 private String tipoPlano; //Plano de bicicleta eletrica ou plano de bicicleta normal
+	 private String metodoPagamento; //Em dinheiro ou cartao (***)
 	
 	
 	 
-	public PlanoAssinatura(Integer valor, String tipoDePlano, String metodoPagamento) {
+	public PlanoAssinatura(Integer valor, String tipoPlano, String metodoPagamento) {
 		super();
 		this.valor = valor;
-		this.tipoDePlano = tipoDePlano;
+		this.tipoPlano = tipoPlano;
 		this.metodoPagamento = metodoPagamento;
 	}
 	
@@ -23,12 +23,12 @@ public class PlanoAssinatura {
 		this.valor = valor;
 	}
 
-	public String getTipoDePlano() {
-		return tipoDePlano;
+	public String getTipoPlano() {
+		return tipoPlano;
 	}
 
-	public void setTipoDePlano(String tipoDePlano) {
-		this.tipoDePlano = tipoDePlano;
+	public void setTipoPlano(String tipoDePlano) {
+		this.tipoPlano = tipoDePlano;
 	}
 
 	public String getMetodoPagamento() {

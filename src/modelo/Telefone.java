@@ -1,6 +1,6 @@
 package modelo;
 
-public class Telefone {
+public class Telefone { //(***)
 	private Integer numero; //Digitos do telefone sem considerar ddd e ddi
 	private Integer ddi; //Digitos que correspondem ao DDI (Pais)
 	private Integer ddd; //DIgitos que correspondem ao DDD (Estado)
