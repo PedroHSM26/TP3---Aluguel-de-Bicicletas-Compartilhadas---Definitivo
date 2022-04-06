@@ -19,13 +19,13 @@ public class TelaLogin implements ActionListener {
 	
 	public TelaLogin() {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20));
-		titulo.setBounds(120, 10, 150, 30);
-		labelEmail.setBounds(140, 100, 150, 30);
-		labelSenha.setBounds(140, 60, 150, 30);
-		valorEmail.setBounds(140, 80, 320, 35);
-		valorSenha.setBounds(140, 40, 320, 35);
-		anterior.setBounds(140, 10, 160, 40);
-		logar.setBounds(160, 10, 160, 40);
+		titulo.setBounds(200, 10, 250, 30);
+		labelEmail.setBounds(140, 40, 150, 30);
+		labelSenha.setBounds(140, 130, 150, 30);
+		valorEmail.setBounds(140, 70, 320, 35);
+		valorSenha.setBounds(140, 160, 320, 35);
+		anterior.setBounds(140, 200, 160, 40);
+		logar.setBounds(300, 200, 160, 40);
 		
 		janela.setLayout(null);
 		

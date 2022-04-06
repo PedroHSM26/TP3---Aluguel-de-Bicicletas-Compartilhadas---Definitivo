@@ -41,7 +41,6 @@ public class TelaMenu implements ActionListener {
 		
 	public static void main(String[] args) {
 		TelaMenu menu = new TelaMenu();
-			
 		
 	}
 
@@ -51,9 +50,8 @@ public class TelaMenu implements ActionListener {
 		
 		// Secao que deve ser usada quando construir os outros frames.
 		
-		if (src == entrada) {
+		if (src == entrada)
 			 new TelaLogin();
-		}
 		
 	}
 
