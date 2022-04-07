@@ -16,7 +16,6 @@ import javax.swing.JTextField;
  * <li>Senha</li>
  * <li>Nome completo</li>
  * <li>Nacionalidade</li>
- * <li>data de nascimento</li>
  * <li>ID Usuario</li>
  * <li>Numero de telefone</li>
  * <li>Plano assinado</li>
@@ -30,7 +29,6 @@ public class Usuario {
 	private String senha;
 	private String nomeCompleto;
 	private String nacionalidade;
-	private Date dataNascimento;
 	private Long idUsuario;
 	private String cpf;
 	private String planoAssinado;
@@ -61,14 +59,6 @@ public class Usuario {
 
 	public void retirarBibicleta() {
 		this.bicicletas.pop();
-	}
-
-	public Date getDataNascimento() {
-		return dataNascimento;
-	}
-
-	public void setDataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
 	}
 
 	public Long getIdUsuario() {
