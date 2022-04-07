@@ -5,11 +5,11 @@ package modelo;
  * @author Pedro Henrique
  * <br>
  * <h2>classe posto</h2>
- * <p>Responsável por ser o modelo representativo do posto</p>
+ * <p>ResponsÃ¡vel por ser o modelo representativo do posto</p>
  * <br>
  * Nela temos:
  * <ul>
- * 	<li>localização</li>
+ * 	<li>localizaÃ§Ã£o</li>
  * <li>total de bicicletas</li>
  * <li>Tipo de bicicleta</li>
  * </ul>
@@ -30,10 +30,10 @@ public class Posto {
 	public void retirarBicicleta() {
 		if(this.getTotalBicicletas() != 0) {
 			this.totalBicicletas -= 1;
-			System.out.println("Você retirou uma bicicleta do Posto de "+ this.getLocalizacao());
+			System.out.println("VocÃª retirou uma bicicleta do Posto de "+ this.getLocalizacao());
 			System.out.println("Agora restam " + this.getTotalBicicletas() + " bicicletas restantes");
 		}else {
-			System.out.println("Não há bicicletas a serem retiradas");
+			System.out.println("NÃ£o hÃ¡ bicicletas a serem retiradas");
 		}
 		
 	}
@@ -41,10 +41,10 @@ public class Posto {
 
 	public void devolverBicicleta() {
 		if(this.totalBicicletas == 10) {
-			System.out.println("Não há bicicletas a serem devolvidas");
+			System.out.println("NÃ£o hÃ¡ bicicletas a serem devolvidas");
 		}else {
 			this.totalBicicletas +=1;
-			System.out.println("Você devolveu uma bicicleta ao posto");
+			System.out.println("VocÃª devolveu uma bicicleta ao posto");
 			System.out.println("Agora o posto possui: "+ this.getTotalBicicletas() + " bicicletas restantes");
 		}
 		

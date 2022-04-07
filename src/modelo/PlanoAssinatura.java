@@ -1,24 +1,60 @@
 package modelo;
 
+/**
+ * 
+ * @author Juan Mangueira ALves
+ * <h2>Model Plano Assinatura</h2>
+ * <br>
+ * <p>
+ * classe responsável pelo tipo de plano de assinatura do usuário <br>
+ * Aqui temos os atributos:
+ * <ul>
+ * <li>tipo de plano</li>
+ * <li>valor</li>
+ * <li>tipo de pagamento</li>
+ * </ul>
+ * </p>
+ *
+ */
 public class PlanoAssinatura {
-	 private String tipoPlano; //Plano de bicicleta eletrica ou plano de bicicleta normal
+	 private Integer valor;
+	 private String tipoDePlano;
+	 private String metodoPagamento;
 	
 	
 	 
-	public PlanoAssinatura(String tipoPlano) {
+	public PlanoAssinatura(Integer valor, String tipoDePlano, String metodoPagamento) {
 		super();
-		
-		this.tipoPlano = tipoPlano;
-		
+		this.valor = valor;
+		this.tipoDePlano = tipoDePlano;
+		this.metodoPagamento = metodoPagamento;
+	}
+	
+
+	public Integer getValor() {
+		return valor;
 	}
 
-	public String getTipoPlano() {
-		return tipoPlano;
+	public void setValor(Integer valor) {
+		this.valor = valor;
 	}
 
-	public void setTipoPlano(String tipoPlano) {
-		this.tipoPlano = tipoPlano;
+	public String getTipoDePlano() {
+		return tipoDePlano;
 	}
+
+	public void setTipoDePlano(String tipoDePlano) {
+		this.tipoDePlano = tipoDePlano;
+	}
+
+	public String getMetodoPagamento() {
+		return metodoPagamento;
+	}
+
+	public void setMetodoPagamento(String metodoPagamento) {
+		this.metodoPagamento = metodoPagamento;
+	}
+
 
 	 
 }

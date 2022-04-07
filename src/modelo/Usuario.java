@@ -8,8 +8,8 @@ import javax.swing.JTextField;
 
 /**
  * <h2>@Class Usuario</h2>
- * <p>Consiste no modelo da conta do usu·rio <br>
- * 	  Aqui nÛs temos:
+ * <p>Consiste no modelo da conta do usu√°rio <br>
+ * 	  Aqui n√≥s temos:
  * </p>
  * 	<ul>
  * <li>Email</li>

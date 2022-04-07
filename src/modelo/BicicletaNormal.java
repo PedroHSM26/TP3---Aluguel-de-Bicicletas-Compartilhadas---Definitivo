@@ -1,30 +1,37 @@
 package modelo;
 
+/**
+ * 
+ * @author Pedro henrique
+ * <h2>Model Bicicleta normal</h2>
+ * <br>
+ * <p>
+ * classe que recebe de herança a bicicleta <br>
+ * e atua com o <strong>atributo marcha</strong>
+ * </p>
+ *
+ */
 public class BicicletaNormal extends Bicicleta {
+
+	private Integer marcha;
 	
-	private Integer tamanhoAro, qntdMarchas; // Tamanho da roda (26 ou 29); Quantidade de Marchas (1 ate 6)
+	public BicicletaNormal(Integer idBicicleta, Boolean estadoUso, Double tempoUso, Integer idadeBicicleta,
+			String qrCode, Integer marcha, Posto posto) {
+		super(idBicicleta, estadoUso, tempoUso, idadeBicicleta, qrCode);
+		
+		this.marcha = marcha;
+		
+	}
+
+	public Integer getMarcha() {
+		return marcha;
+	}
+
+	public void setMarcha(Integer marcha) {
+		this.marcha = marcha;
+	}
+
 	
-	public BicicletaNormal(Integer idBicicleta, Boolean ocupacao, Integer tipoBicicleta, Posto posto, Integer tamanhoAro, Integer qntdMarchas) {
-		super(idBicicleta, ocupacao, tipoBicicleta);
-		this.setTamanhoAro(tamanhoAro);
-		this.setQntdMarchas(qntdMarchas);
-	}
-
-	public Integer getQntdMarchas() {
-		return qntdMarchas;
-	}
-
-	public void setQntdMarchas(Integer qntdMarchas) {
-		this.qntdMarchas = qntdMarchas;
-	}
-
-
-	public Integer getTamanhoAro() {
-		return tamanhoAro;
-	}
-
-	public void setTamanhoAro(Integer tamanhoAro) {
-		this.tamanhoAro = tamanhoAro;
-	}
-
+	
+	
 }
