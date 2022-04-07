@@ -8,6 +8,22 @@ import org.junit.jupiter.api.Test;
 
 import controle.BicicletaController;
 import modelo.Usuario;
+/**
+ * 
+ * @author Juan Mangueira
+ * <h2>
+ * Bicicleta controller teste
+ *</h2>
+ *<span>
+ * Teste do controller bicicleta
+ * Retorna true caso o painel bicicleta seja exibido sem erros
+ * 
+ * O teste e realizado utilizando um usuario qualquer e uma frame
+ * 
+ *</span>
+ */
+
+
 
 class BicicletaControllerTest {
 

@@ -13,6 +13,21 @@ import controle.PostoController;
 import controle.UserPreferencesController;
 import modelo.Usuario;
 
+/**
+ * 
+ * @author Juan Mangueira
+ * <h2>
+ * UserPreferenceControllerTest 
+ *</h2>
+ *<span>
+ * Teste de controle de preferencias do usuario
+ * Retorna true caso o usuario consiga abrir o painel de editar os dados e deletar a conta
+ * 
+ * O teste e realizado utilizando um usuario com dados devidamente preenchidos, dois botoes e uma lista de usuarios
+ * 
+ *</span>
+ */
+
 class UserPreferencesControllerTest {
 
 

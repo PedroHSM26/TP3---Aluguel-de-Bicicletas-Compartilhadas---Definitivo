@@ -10,6 +10,21 @@ import org.junit.jupiter.api.Test;
 import controle.PostoController;
 import modelo.Usuario;
 
+/**
+ * 
+ * @author Juan Mangueira
+ * <h2>
+ * Posto controller teste
+ *</h2>
+ *<span>
+ * Teste do controller Posto
+ * Retorna true caso o posto consiga atender a funcionalidade de retirar bicicleta verificando o plano do usuario
+ * 
+ * O teste e realizado utilizando um usuario com dados devidamente preenchidos
+ * 
+ *</span>
+ */
+
 class PostoControllerTest {
 
 	
