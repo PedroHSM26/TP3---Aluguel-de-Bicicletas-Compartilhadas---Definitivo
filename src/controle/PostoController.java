@@ -21,7 +21,7 @@ import modelo.Usuario;
  * @author Juan Mangueira Alves
  * <h2>Posto Controller</h2>
  * <p>
- * classe responsável por controlar os postos de bicicletas disponíveis e os seus devidos planos
+ * classe responsavel por controlar os postos de bicicletas disponiveis e os seus devidos planos
  * de assinatura
  * </p>
  *
@@ -29,20 +29,20 @@ import modelo.Usuario;
 public class PostoController {
 
 	/**
-	 * Os parametros utilizados são:
+	 * Os parametros utilizados sao:
 	 * @param frame
 	 * @param usuario
 	 * <br></br>
-	 * O <strong> usuario </strong> aqui é utilizado no momento da validação de qual tipo de
+	 * O <strong> usuario </strong> aqui e utilizado no momento da validacaoo de qual tipo de
 	 * <br>
 	 * plano de assinatura ele tem cadastrado para poder retirar alguma bicicleta
 	 * <br></br>
-	 * O <strong>Frame</strong> é utilizado para associar o painel ao frame principal da aplicação
+	 * O <strong>Frame</strong> e utilizado para associar o painel ao frame principal da aplicacao
 	 * <br>
 	 * sendo que o painel do posto controller tem como elementos:
 	 * <ul>
 	 * 	<li>o titulo do posto</li>
-	 * 	<li>a localização</li>
+	 * 	<li>a localizacao</li>
 	 * <li>o tipo de bicicleta</li>
 	 * </ul> 
 	 */
@@ -62,7 +62,7 @@ public class PostoController {
 		     controls.add(PegarT);
 		     
 		     labels.add(new JLabel("<html>Nome: <span color = #38805F >Samambaia</span> </html>", SwingConstants.TRAILING));
-		     labels.add(new JLabel("Tipo: Bicicleta Elétrica", SwingConstants.TRAILING));
+		     labels.add(new JLabel("Tipo: Bicicleta Elï¿½trica", SwingConstants.TRAILING));
 		     p.add(labels, BorderLayout.LINE_START);
 			 
 		     JButton PegarS = new JButton("Pegar");
@@ -91,13 +91,13 @@ public class PostoController {
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if(usuario.getPlanoAssinado().equals("Bicicleta Normal") || usuario.getPlanoAssinado().equals("Plus (Normal & Elétrica)")) {
+					if(usuario.getPlanoAssinado().equals("Bicicleta Normal") || usuario.getPlanoAssinado().equals("Plus (Normal & Elï¿½trica)")) {
 						JOptionPane.showOptionDialog(frame, "Bicicleta Retirada!", "Postos", JOptionPane.PLAIN_MESSAGE, 
 								JOptionPane.QUESTION_MESSAGE,
 						null, new Object[] {}, null);
 						usuario.setBicicletas(1);
 					}else {
-						JOptionPane.showOptionDialog(frame, "Você não assinou este plano", "Postos", JOptionPane.PLAIN_MESSAGE, 
+						JOptionPane.showOptionDialog(frame, "Vocï¿½ nï¿½o assinou este plano", "Postos", JOptionPane.PLAIN_MESSAGE, 
 								JOptionPane.QUESTION_MESSAGE,
 						null, new Object[] {}, null);
 					}
@@ -109,13 +109,13 @@ public class PostoController {
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if(usuario.getPlanoAssinado().equals("Bicicleta Elétrica")|| usuario.getPlanoAssinado().equals("Plus (Normal & Elétrica)")) {
+					if(usuario.getPlanoAssinado().equals("Bicicleta Elï¿½trica")|| usuario.getPlanoAssinado().equals("Plus (Normal & Elï¿½trica)")) {
 						JOptionPane.showOptionDialog(frame, "Bicicleta Retirada!", "Postos", JOptionPane.PLAIN_MESSAGE, 
 								JOptionPane.QUESTION_MESSAGE,
 						null, new Object[] {}, null);
 						usuario.setBicicletas(1);
 					}else {
-						JOptionPane.showOptionDialog(frame, "Você não assinou este plano", "Postos", JOptionPane.PLAIN_MESSAGE, 
+						JOptionPane.showOptionDialog(frame, "Vocï¿½ nï¿½o assinou este plano", "Postos", JOptionPane.PLAIN_MESSAGE, 
 								JOptionPane.QUESTION_MESSAGE,
 						null, new Object[] {}, null);
 					}
@@ -126,13 +126,13 @@ public class PostoController {
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if(usuario.getPlanoAssinado().equals("Plus (Normal & Elétrica)")) {
+					if(usuario.getPlanoAssinado().equals("Plus (Normal & Elï¿½trica)")) {
 						JOptionPane.showOptionDialog(frame, "Bicicleta Retirada!", "Postos", JOptionPane.PLAIN_MESSAGE, 
 								JOptionPane.QUESTION_MESSAGE,
 						null, new Object[] {}, null);
 						usuario.setBicicletas(1);
 					}else {
-						JOptionPane.showOptionDialog(frame, "Você não assinou este plano", "Postos", JOptionPane.PLAIN_MESSAGE, 
+						JOptionPane.showOptionDialog(frame, "Vocï¿½ nï¿½o assinou este plano", "Postos", JOptionPane.PLAIN_MESSAGE, 
 								JOptionPane.QUESTION_MESSAGE,
 						null, new Object[] {}, null);
 					}
@@ -143,13 +143,13 @@ public class PostoController {
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if(usuario.getPlanoAssinado().equals("Bicicleta Normal") || usuario.getPlanoAssinado().equals("Plus (Normal & Elétrica)")) {
+					if(usuario.getPlanoAssinado().equals("Bicicleta Normal") || usuario.getPlanoAssinado().equals("Plus (Normal & Elï¿½trica)")) {
 						JOptionPane.showOptionDialog(frame, "Bicicleta Retirada!", "Postos", JOptionPane.PLAIN_MESSAGE, 
 								JOptionPane.QUESTION_MESSAGE,
 						null, new Object[] {}, null);
 						usuario.setBicicletas(1);
 					}else {
-						JOptionPane.showOptionDialog(frame, "Você não assinou este plano", "Postos", JOptionPane.PLAIN_MESSAGE, 
+						JOptionPane.showOptionDialog(frame, "Vocï¿½ nï¿½o assinou este plano", "Postos", JOptionPane.PLAIN_MESSAGE, 
 								JOptionPane.QUESTION_MESSAGE,
 						null, new Object[] {}, null);
 					}	

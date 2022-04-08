@@ -29,7 +29,7 @@ import modelo.Usuario;
  * 
  * @author Pedro Henrique
  * <h2>Main controller</h2>
- * <p>Classe responsável por cadastrar usuario e verificar o login</p>
+ * <p>Classe responsavel por cadastrar usuario e verificar o login</p>
  * <br>
  * Nela temos os metodos:
  * <ul>
@@ -37,15 +37,15 @@ import modelo.Usuario;
  *  <li>showRegister</li>
  * </ul>
  * 
- * <h3>O método Show Login</h3>
- * <p>É responsável por ler a lista existente de usuários e 
- * validar se os dados passados conferem com algum usuário cadastrado, caso o retorno seja
+ * <h3>O metodo Show Login</h3>
+ * <p>o responsavel por ler a lista existente de usuarios e 
+ * validar se os dados passados conferem com algum usuario cadastrado, caso o retorno seja
  * <br>
- * verdadeiro, o método irá passar os dados para a interface principal do programa
+ * verdadeiro, o metodo ira passar os dados para a interface principal do programa
  * </p>
- * <h3>O método Show Register</h3>
- * <p>É responsável por cadastrar os usuários na lista do programa <br>
- * podendo realizar mais de um cadastro, adicionando assim vários usuários
+ * <h3>O metodo Show Register</h3>
+ * <p>o responsavel por cadastrar os usuarios na lista do programa <br>
+ * podendo realizar mais de um cadastro, adicionando assim varios usuarios
  * </p>
  */
 
@@ -86,7 +86,7 @@ public class MainController {
 						usuario.setEmail(usr.get(i).getEmail());
 						usuario.setSenha(usr.get(i).getSenha());
 
-						JOptionPane.showOptionDialog(frame, "Usuário logado", "", JOptionPane.PLAIN_MESSAGE,
+						JOptionPane.showOptionDialog(frame, "Usuï¿½rio logado", "", JOptionPane.PLAIN_MESSAGE,
 								JOptionPane.QUESTION_MESSAGE, null, new Object[] {}, null);
 						JComponent comp = (JComponent) e.getSource();
 						Window win = SwingUtilities.getWindowAncestor(comp);
@@ -138,7 +138,7 @@ public class MainController {
 		JTextField cpf = new JTextField("");
 		controls.add(cpf);
 		JRadioButton planoNormal = new JRadioButton("Plano Normal");
-		JRadioButton planoEletrico = new JRadioButton("Plano Elétrico");
+		JRadioButton planoEletrico = new JRadioButton("Plano Elï¿½trico");
 		JRadioButton planoPlus = new JRadioButton("Plano Plus");
 
 		ButtonGroup gp = new ButtonGroup();
@@ -159,7 +159,7 @@ public class MainController {
 
 				if (nome.getText().isEmpty() || email.getText().isEmpty() || password.getText().isEmpty()
 						|| nacionalidade.getText().isEmpty() || telefone.getText().isEmpty()) {
-					JOptionPane.showOptionDialog(frame, "Você não pode deixar campos vazios ao realizar o cadastro!",
+					JOptionPane.showOptionDialog(frame, "Vocï¿½ nï¿½o pode deixar campos vazios ao realizar o cadastro!",
 							"erro", JOptionPane.PLAIN_MESSAGE, JOptionPane.QUESTION_MESSAGE, null, new Object[] {},
 							null);
 
@@ -174,15 +174,15 @@ public class MainController {
 						
 						
 						Usuario usuario = new Usuario(email.getText(), password.getText(), nome.getText(),
-								nacionalidade.getText(), "Bicicleta Elétrica", telefone.getText(),cpf.getText());
+								nacionalidade.getText(), "Bicicleta Elï¿½trica", telefone.getText(),cpf.getText());
 						usr.add(usuario);
 					} else if (planoPlus.isSelected()) {
 						Usuario usuario = new Usuario(email.getText(), password.getText(), nome.getText(),
-								nacionalidade.getText(), "Plus (Normal & Elétrica)", telefone.getText(), cpf.getText());
+								nacionalidade.getText(), "Plus (Normal & Elï¿½trica)", telefone.getText(), cpf.getText());
 						usr.add(usuario);
 					}
 
-					JOptionPane.showOptionDialog(frame, "Usuário Criado com Sucesso!", "", JOptionPane.PLAIN_MESSAGE,
+					JOptionPane.showOptionDialog(frame, "Usuï¿½rio Criado com Sucesso!", "", JOptionPane.PLAIN_MESSAGE,
 							JOptionPane.QUESTION_MESSAGE, null, new Object[] {}, null);
 					JComponent comp = (JComponent) e.getSource();
 					Window win = SwingUtilities.getWindowAncestor(comp);

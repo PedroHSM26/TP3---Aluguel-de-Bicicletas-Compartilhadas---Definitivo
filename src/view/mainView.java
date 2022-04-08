@@ -31,14 +31,14 @@ import modelo.Usuario;
 public class mainView {
 
 	/**
-	 * <h2> Atributos para inicialização do programa </h2>
+	 * <h2> Atributos para inicializacao do programa </h2>
 	 * @param usr - lista de usuarios que o programa carrega ao iniciar
-	 * @param MainController- Controller principal da aplicação, responsavel pelo registro e login dos usuarios
-	 * @param BicicletaController - controller responsável pela devolução das bicicletas
+	 * @param MainController- Controller principal da aplicacao, responsavel pelo registro e login dos usuarios
+	 * @param BicicletaController - controller responsavel pela devolucaoo das bicicletas
 	 * @param postoController - controller responsavel pela retirada das bicicletas
-	 * @param usuario - inicialização do usuario "vazio", aquele que receberá dados para o login
+	 * @param usuario - inicializacao do usuario "vazio", aquele que receber dados para o login
 	 * @param localDate - responsavel por captar a data de hoje
-	 * @param DateTimerFormater - responsavel por formatar a data para o padrão brasileiro
+	 * @param DateTimerFormater - responsavel por formatar a data para o padrao brasileiro
 	 * 
 	 */
 	static LinkedList<Usuario> usr = new LinkedList<Usuario>();
@@ -53,13 +53,13 @@ public class mainView {
 	/**
 	 * <h2>Inicio da interface principal</h2>
 	 * <p>
-	 * Aqui é inicializado o nosso programa como um todo, <br>
+	 * Aqui ï¿½ inicializado o nosso programa como um todo, <br>
 	 * dentro deste metodo temos: 
 	 * <ul>
-	 * <li>a chamada para o registro e login do usuário <br></li>
-	 * <li>a edição de dados da conta <br></li>
+	 * <li>a chamada para o registro e login do usuï¿½rio <br></li>
+	 * <li>a ediï¿½ï¿½o de dados da conta <br></li>
 	 * <li>a leitura de dados da bicicleta <br></li>
-	 * <li>a remoção de bicicletas <br></li>
+	 * <li>a remoï¿½ï¿½o de bicicletas <br></li>
 	 * </ul>
 	 * 
 	 * </p>
@@ -128,7 +128,7 @@ public class mainView {
 			public void actionPerformed(ActionEvent e) {
 				mainControler.showLogin(frame, usr, usuario, loginBtn, cadastroBtn);
 
-				// Após logar com sucesso, o painel de boas vindas some e o usuário é logado
+				// Apï¿½s logar com sucesso, o painel de boas vindas some e o usuï¿½rio ï¿½ logado
 				if (loginBtn.isVisible() == false) {
 					
 					
@@ -198,12 +198,12 @@ public class mainView {
 		
 		
 
-		// Tamanho e posicionamento dos botões
+		// Tamanho e posicionamento dos botï¿½es
 		loginBtn.setBounds(90, 10, 120, 30);
 		cadastroBtn.setBounds(220, 10, 120, 30);
 		closeBtn.setBounds(350, 10, 120, 30);
 
-		// Adicionando os botões a tela
+		// Adicionando os botï¿½es a tela
 		frame.add(closeBtn);
 		frame.add(loginBtn);
 		frame.add(cadastroBtn);

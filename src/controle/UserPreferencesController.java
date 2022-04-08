@@ -27,9 +27,9 @@ import modelo.Usuario;
  * @author Juan Mangueira alves
  *<h2>User Preferences controller</h2>
  *<br>
- *<p>Classe responsável pela edição de dados do usuário</p>
+ *<p>Classe responsavel pela edicao de dados do usuario</p>
  *<br>
- *Aqui o usuário pode editar:
+ *Aqui o usuario pode editar:
  *<ul>
  *<li>Nome</li>
  *<li>Nacionalidade</li>
@@ -37,7 +37,7 @@ import modelo.Usuario;
  *<li>Senha</li>
  *<li>Telefone</li>
  *<br>
- *Contudo o usuário não pode mudar de plano escolhido
+ *Contudo o usuario nao pode mudar de plano escolhido
  *</ul>
  */
 public class UserPreferencesController {
@@ -91,7 +91,7 @@ public class UserPreferencesController {
 					
 					
 								JOptionPane.showOptionDialog(frame,
-				                "Dados do usuário atualizados com sucesso","",
+				                "Dados do usuario atualizados com sucesso","",
 				                JOptionPane.PLAIN_MESSAGE,
 				                JOptionPane.QUESTION_MESSAGE,
 				                null, new Object[]{}, null);
@@ -132,7 +132,7 @@ public class UserPreferencesController {
 	    controls.add(atualizarBtn);
 	    controls.add(DeletarContaBtn);
         JOptionPane.showOptionDialog(frame,
-                p,"Dados do usuário",
+                p,"Dados do usuï¿½rio",
                 JOptionPane.PLAIN_MESSAGE,
                 JOptionPane.QUESTION_MESSAGE,
                 null, new Object[]{}, null);

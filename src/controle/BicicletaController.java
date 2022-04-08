@@ -22,8 +22,8 @@ import modelo.Usuario;
  * @author Pedro Henrique
  * <h2>Bicicleta Controller</h2>
  * <br>
- * <p>Class responsável pela leitura de quantas bicicletas existem na conta do usuário e pela devolução delas</p>
- * <p>Caso o usuário não possua nenhuma bicicleta, será informado a ele sobre isso</p>
+ * <p>Class responsavel pela leitura de quantas bicicletas existem na conta do usuario e pela devolucao delas</p>
+ * <p>Caso o usuario nao possua nenhuma bicicleta, sera informado a ele sobre isso</p>
  */
 
 public class BicicletaController {
@@ -39,7 +39,7 @@ public class BicicletaController {
 		JButton cancelar = new JButton("Cancelar");
 		
 	    if(usuario.getBicicletas() == 1) {
-	    labels.add(new JLabel("<html>Você possui: "+usuario.getBicicletas() + " Bicicleta"
+	    labels.add(new JLabel("<html>Vocï¿½ possui: "+usuario.getBicicletas() + " Bicicleta"
 	    		+"<br> do tipo: <span color = #38805F >"+ usuario.getPlanoAssinado()+ " </span>"
 	    		+"<br>Deseja devolver ela?"
 	    		+ "</html>", SwingConstants.TRAILING));
@@ -47,7 +47,7 @@ public class BicicletaController {
 	    	p.add(cancelar);
 	    	
 	    }else if(usuario.getBicicletas() > 1){
-	    	 labels.add(new JLabel("<html>Você possui: "+usuario.getBicicletas() + " Bicicletas"
+	    	 labels.add(new JLabel("<html>Vocï¿½ possui: "+usuario.getBicicletas() + " Bicicletas"
 	 	    		+"<br> do tipo: <span color = #38805F >"+ usuario.getPlanoAssinado()+ " </span>"
 	 	    		+"<br>Deseja devolvelas?"
 	 	    		+ "</html>", SwingConstants.TRAILING));
@@ -56,7 +56,7 @@ public class BicicletaController {
 	 	    	
 	    }
 	    else {
-	    labels.add(new JLabel("Você ainda não possui bicicletas", SwingConstants.TRAILING));
+	    labels.add(new JLabel("Vocï¿½ ainda nï¿½o possui bicicletas", SwingConstants.TRAILING));
 	   
 	    }
 	    p.add(labels, BorderLayout.LINE_START);
